@@ -1,7 +1,0 @@
-ifndef::ROOT_PATH[:ROOT_PATH: ../../../..]
-
-[#com_github_docastest_howto_knownissues]
-= Known issues
-
-include::_KnownIssues.knownIssues.approved.adoc[leveloffset=+1]
-

@@ -1,7 +1,0 @@
-ifndef::ROOT_PATH[:ROOT_PATH: ../../..]
-
-[#com_github_docastest_documentationtestingdocumentation]
-= Documentation Testing Library
-
-include::_DocumentationTestingDocumentation.documentationTesting.approved.adoc[leveloffset=+1]
-

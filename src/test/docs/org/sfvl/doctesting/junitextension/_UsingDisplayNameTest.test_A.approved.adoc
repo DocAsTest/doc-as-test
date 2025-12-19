@@ -1,7 +1,0 @@
-ifndef::ROOT_PATH[:ROOT_PATH: ../../../../..]
-
-[#com_github_docastest_doctesting_junitextension_usingdisplaynametest_test_a]
-= Title for this test
-
-In my *test*
-

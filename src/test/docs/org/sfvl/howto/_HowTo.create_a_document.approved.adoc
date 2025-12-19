@@ -1,6 +1,0 @@
-ifndef::ROOT_PATH[:ROOT_PATH: ../../../..]
-
-include::../../howto/_CreateADocument.generate_html.approved.adoc[leveloffset=+0]
-
-For more features, you can look at the link:{ROOT_PATH}/com/github/docastest/howto/CreateADocument.html[documentation on creating a document].
-

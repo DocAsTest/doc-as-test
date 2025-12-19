@@ -1,7 +1,0 @@
-ifndef::ROOT_PATH[:ROOT_PATH: ../../../../..]
-
-[#com_github_docastest_samples_justone_onetest]
-= One test
-
-include::_OneTest.test_A.approved.adoc[leveloffset=+1]
-

@@ -1,7 +1,0 @@
-ifndef::ROOT_PATH[:ROOT_PATH: ../../../..]
-
-[#com_github_docastest_howto_tutorial]
-= Tutorial
-
-include::_Tutorial.tutorial.approved.adoc[leveloffset=+1]
-

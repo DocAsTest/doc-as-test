@@ -1,7 +1,0 @@
-ifndef::ROOT_PATH[:ROOT_PATH: ../../../..]
-
-[#com_github_docastest_samples_mycustomwritertest]
-= My custom writer test
-
-include::_MyCustomWriterTest.test_A.approved.adoc[leveloffset=+1]
-

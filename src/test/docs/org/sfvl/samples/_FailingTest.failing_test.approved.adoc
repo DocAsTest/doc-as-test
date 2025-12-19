@@ -1,9 +1,0 @@
-ifndef::ROOT_PATH[]
-:ROOT_PATH: ../../..
-endif::[]
-
-[#com_github_docastest_samples_FailingTest_failing_test]
-= Failing test
-
-Some information before failure.
-
