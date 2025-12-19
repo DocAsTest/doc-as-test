@@ -1,0 +1,31 @@
+ifndef::ROOT_PATH[:ROOT_PATH: ../../../..]
+ifdef::is-html-doc[:imagesdir: {ROOT_PATH}/images]
+ifndef::is-html-doc[:imagesdir: {ROOT_PATH}/../resources/images]
+
+[#com_github_docastest_docformatter_asciidocformattertest_should_format_standard_option]
+= Standard options
+
+Standard option to add at the begining of the document.
+(link:https://asciidoctor.org/docs/user-manual/#builtin-attributes[Description from asciidoctor Documentation])
+
+- *sourcedir*: Path to locate source files.
+- *source-highlighter*: Source code highlighter to use.
+- *docinfo*:
+
+[red]##_Usage_##
+[source,java,indent=0]
+----
+        output = formatter.standardOptions();
+----
+
+[red]##_Asciidoc generated_##
+------
+:sourcedir: ..
+:source-highlighter: rouge
+:docinfo:
+
+------
+
+___
+
+

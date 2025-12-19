@@ -1,0 +1,89 @@
+ifndef::ROOT_PATH[:ROOT_PATH: ../../../../..]
+
+[#com_github_docastest_doctesting_junitextension_approvalsextensiontest_failing_test_output]
+= Failing test output
+
+When a test fails, the error is written in the final document.
+It's help to understand and investigate on the problem.
+
+When the test fails, the reason (exception) is written into the generated document.
+
+// Test result for FailingTest: Fails
+
+
+.Test example used to generate class document
+[source,java,indent=0]
+----
+class FailingTest {
+    @RegisterExtension
+    static final ApprovalsExtension doc = new SimpleApprovalsExtension();
+
+    @Test
+    public void failing_test() {
+        doc.write("Some information before failure.", "", "");
+        fail("Problem on the test, it fails.");
+        doc.write("Information added after failure are not in the final document.", "");
+    }
+}
+----
+
+
+
+.Document generated (exception stack trace is truncated)
+------
+\ifndef::ROOT_PATH[:ROOT_PATH: ../../../..]
+
+[#com_github_docastest_samples_failingtest_failing_test]
+= Failing test
+
+Some information before failure.
+
+
+
+*Error generating documentation*
+----
+org.opentest4j.AssertionFailedError: Problem on the test, it fails.
+include::_ApprovalsExtensionTest.failing_test_output.ExceptionStackTrace.adoc[lines=1..3]
+	...
+
+----
+
+------
+
+_Final rendering_
+[.rendering]
+--
+ifndef::ROOT_PATH[:ROOT_PATH: ../../../..]
+
+[#com_github_docastest_samples_failingtest_failing_test]
+[.title1]#Failing test#
+
+Some information before failure.
+
+
+
+*Error generating documentation*
+----
+org.opentest4j.AssertionFailedError: Problem on the test, it fails.
+include::_ApprovalsExtensionTest.failing_test_output.ExceptionStackTrace.adoc[lines=1..3]
+	...
+
+----
+
+--
+
+A received file is produced for the class containing the failing test.
+This file includes received files if they exist.
+It is thus possible to visualize the received file in the file with other methods.
+
+.Document generated
+----
+\ifndef::ROOT_PATH[:ROOT_PATH: ../../../..]
+
+[#com_github_docastest_samples_failingtest]
+= Failing test
+
+\include::_FailingTest.failing_test.received.adoc[leveloffset=+1]
+
+----
+

@@ -1,0 +1,60 @@
+ifndef::ROOT_PATH[:ROOT_PATH: ../../../../..]
+
+[#com_github_docastest_doctesting_utils_docwritertest_format_title]
+= Format title
+
+When a title is specified, it is used as title.
+
+[source,java,indent=0]
+----
+            Method testMethod = DocWriterTest.class.getMethod("format_title");
+            final String output = docWriter.formatOutput("My title", testMethod);
+
+----
+
+----
+ifndef::ROOT_PATH[:ROOT_PATH: ../../../../..]
+
+[#com_github_docastest_doctesting_utils_docwritertest_format_title]
+= My title
+
+
+
+
+----
+When a title is not specified, title comes from the method name or the class name after some formatting
+ (remove '_', uppercase first letter).
+
+[source,java,indent=0]
+----
+            Method testMethod = DocWriterTest.class.getMethod("format_title");
+            final String method_output = docWriter.formatOutput(testMethod);
+
+            final String class_output = docWriter.formatOutput(MyTest.class);
+
+----
+
+.Format title from method name
+----
+ifndef::ROOT_PATH[:ROOT_PATH: ../../../../..]
+
+[#com_github_docastest_doctesting_utils_docwritertest_format_title]
+= Format title
+
+
+
+
+----
+.Format title from class name
+----
+ifndef::ROOT_PATH[:ROOT_PATH: ../../../..]
+
+[#com_github_docastest_samples_mytest]
+= My test
+
+\include::_MyTest.test_A.approved.adoc[leveloffset=+1]
+
+
+----
+
+

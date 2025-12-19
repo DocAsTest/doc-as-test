@@ -1,0 +1,56 @@
+ifndef::ROOT_PATH[:ROOT_PATH: ../../../../..]
+
+[#com_github_docastest_doctesting_utils_docpathtest_path_by_type]
+= Path by type
+
+DocPath is created with this code:
+[source,indent=0]
+----
+final DocPath docPath = new DocPath(MyTest.class);
+----
+
+Note that `MyTest` class is declared in package `com.github.docastest.samples`.
+
+We also used `com.github.docastest.doctesting.utils.DocPathTest` class to display `from` and `to` results with approved file (`src/test/docs/com/github/docastest/doctesting/utils/_DocPathTest.approved.adoc`).
+[%autowidth]
+[%header]
+|====
+| Method | Result
+| name() | MyTest
+|====
+[%autowidth]
+[%header]
+|====
+| Code | Method | Result
+.5+a| `page()` | path() | src/test/docs/com/github/docastest/samples/MyTest.adoc
+a| folder() | src/test/docs/com/github/docastest/samples
+a| filename() | MyTest.adoc
+a| from() | ../../samples/MyTest.adoc
+a| to() | ../doctesting/utils/_DocPathTest.approved.adoc
+.5+a| `approved()` | path() | src/test/docs/com/github/docastest/samples/_MyTest.approved.adoc
+a| folder() | src/test/docs/com/github/docastest/samples
+a| filename() | _MyTest.approved.adoc
+a| from() | ../../samples/_MyTest.approved.adoc
+a| to() | ../doctesting/utils/_DocPathTest.approved.adoc
+.5+a| `received()` | path() | src/test/docs/com/github/docastest/samples/_MyTest.received.adoc
+a| folder() | src/test/docs/com/github/docastest/samples
+a| filename() | _MyTest.received.adoc
+a| from() | ../../samples/_MyTest.received.adoc
+a| to() | ../doctesting/utils/_DocPathTest.approved.adoc
+.5+a| `test()` | path() | src/test/java/com/github/docastest/samples/MyTest.java
+a| folder() | src/test/java/com/github/docastest/samples
+a| filename() | MyTest.java
+a| from() | ../../../../../../java/com/github/docastest/samples/MyTest.java
+a| to() | ../../../../../docs/com/github/docastest/doctesting/utils/_DocPathTest.approved.adoc
+.5+a| `resource()` | path() | src/test/resources/com/github/docastest/samples/MyTest.adoc
+a| folder() | src/test/resources/com/github/docastest/samples
+a| filename() | MyTest.adoc
+a| from() | ../../../../../../resources/com/github/docastest/samples/MyTest.adoc
+a| to() | ../../../../../docs/com/github/docastest/doctesting/utils/_DocPathTest.approved.adoc
+.5+a| `html()` | path() | com/github/docastest/samples/MyTest.html
+a| folder() | com/github/docastest/samples
+a| filename() | MyTest.html
+a| from() | ../../../../../../../../com/github/docastest/samples/MyTest.html
+a| to() | ../../../../src/test/docs/com/github/docastest/doctesting/utils/_DocPathTest.approved.adoc
+|====
+

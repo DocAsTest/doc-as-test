@@ -1,0 +1,9 @@
+ifndef::ROOT_PATH[:ROOT_PATH: ../../../../..]
+
+[#com_github_docastest_doctesting_writer_classdocumentationtest_demonestedtest_adding_should_be_9_when_adding_2_3_and_4]
+= Adding 3 simple numbers
+
+A nested test.
+
+2 + 3 + 4 = 9
+

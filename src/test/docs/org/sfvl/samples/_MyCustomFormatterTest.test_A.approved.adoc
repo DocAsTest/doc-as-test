@@ -1,0 +1,12 @@
+ifndef::ROOT_PATH[:ROOT_PATH: ../../../..]
+
+[#com_github_docastest_samples_mycustomformattertest_test_a]
+= Test A
+
+
+[WARNING]
+====
+Warning: My custom warning.
+====
+
+

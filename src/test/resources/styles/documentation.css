@@ -1,0 +1,222 @@
+/*
+Own classes:
+includeblock: format an include as a block.
+*/
+
+:root {
+  --bg1: #05fdCC;
+  --bg2: #0fd289;
+  --logo-height: 100;
+  --shadow-color: #084f34;
+  --title-color: #7a2518;
+
+  --media-small-header-height:50px;
+}
+
+
+#content {
+   max-width: unset;
+   padding-left: 5%;
+   padding-right: 5%;
+}
+
+table {
+    background: var(--bg1);
+}
+
+table.tableblock, th.tableblock, td.tableblock {
+    border-color: black;
+}
+
+th.tableblock {
+    background: var(--bg2);
+}
+
+#toc.toc2, #project_home {
+    background: var(--bg2);
+    box-shadow: 5px 5px 5px var(--shadow_color);
+    font-size: 1.1em;
+    width: 260px; /* Do not use 'em' to be independent of the font-size */
+    padding: 1.25em 1em;
+    position: fixed;
+    left: 0;
+}
+
+#toc.toc2 {
+    top: var(--logo-height); /* Height of the project_home */
+    overflow: scroll; /* To avoid menu position change when scoll bar appear */
+    scrollbar-color: var(--bg1) var(--bg2);
+}
+
+#project_home {
+    top: 0;
+    height: var(--logo-height); /* toc2 need to be position after this height */
+
+    font-family: "Noto Serif","DejaVu Serif",serif;
+    font-style: italic;
+    font-size:2em;
+}
+
+#toc.toc2 a {
+    color: #7a2518;
+}
+
+#toc.toc2 #toctitle {
+    font-family: "Noto Serif","DejaVu Serif",serif;
+    font-style: italic;
+
+    color: var(--title-color);
+}
+
+body {
+    background: var(--bg1) !important;
+}
+
+h1 {
+    font-family: "Noto Serif","DejaVu Serif",serif;
+    font-style: italic;
+
+    color: var(--title-color);
+    font-weight: 400;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 2em;
+    border-top: solid;
+    padding-top: 0.2em;
+}
+
+:not(pre):not([class^="L"]) > code {
+    background: var(--bg2);
+}
+
+.listingblock .content pre,
+.listingblock .content pre:not(.highlight) {
+    background: var(--title-color);
+    box-shadow: 5px 5px 5px var(--shadow_color);
+}
+
+/* Remove margin for listingblock in table */
+td.tableblock > .content > .listingblock {
+    margin: 0em;
+}
+
+.includeblock{
+    padding: 1em;
+    background: #fffef7;
+    box-shadow: 5px 5px 5px var(--shadow_color);
+}
+
+.literalblock pre,
+.listingblock > .content > pre:not(.highlight),
+.exampleblock > .content {
+    background: var(--bg2);
+    box-shadow: 5px 5px 5px var(--shadow_color);
+}
+
+/* Menu */
+
+.sectlevel2 {
+    display: none;
+    height: 0;
+    opacity:0;
+}
+
+.sectlevel1>li {
+    padding-left: 0.5em;
+}
+.sectlevel1>li.menu_open {
+    font-weight: bold;
+    background-color: var(--bg1);
+    padding: 0.5em;
+}
+
+.sectlevel1>li.menu_open .sectlevel2 {
+    display: block;
+    height: auto;
+    opacity:1;
+    font-weight: normal;
+}
+
+.inline {
+   display: inline-block;
+   vertical-align: top;
+   margin-right: 2em;
+}
+
+
+/*
+To add a section that render asciidoc you can open a block:
+
+[.rendering]
+--
+My text
+--
+
+or, if you need to include a file, you could not do it inside a block.
+Instead of that, you can create a section with title.
+
+[.rendering]
+== Rendering of the result
+
+The title will be hide and all the content has a specific css.
+
+
+*/
+div.sectionbody .rendering > h2:first-child,
+div.sectionbody .rendering > h3:first-child,
+div.sectionbody .rendering > h4:first-child {
+    display: none;
+}
+/*
+div.sectionbody .rendering > h2:first-child + div,
+div.sectionbody .rendering > h3:first-child + div,
+div.sectionbody .rendering > h4:first-child + div {
+*/
+
+.openblock.rendering,
+div.sectionbody .rendering,
+div.sectionbody .rendering,
+div.sectionbody .rendering {
+    padding: 20px;
+    margin-bottom: 1em;
+    background: var(--bg1);
+    filter: brightness(0.90);
+    box-shadow: 10px 5px 5px var(--shadow-color);
+    border: 1px solid var(--shadow-color);
+}
+div.sectionbody .rendering h3,
+div.sectionbody .rendering h4,
+div.sectionbody .rendering h5 {
+    margin-top: 0px;
+}
+
+.openblock.rendering .title1,
+div.sectionbody .rendering .title1 {
+    font-size: 2em;
+    font-family: "Open Sans","DejaVu Sans",sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #ba3925;
+    text-rendering: optimizeLegibility;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+@media (max-width: 800px) {
+  #toc {
+    display: none;
+  }
+  body.toc2 {
+    padding-left:0em;
+    padding-top:var(--media-small-header-height);
+  }
+
+  #project_home {
+    height: var(--media-small-header-height);
+    width: 100%;
+    padding: 2px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,26 @@
+ifndef::ROOT_PATH[:ROOT_PATH: ../../../..]
+ifdef::is-html-doc[:imagesdir: {ROOT_PATH}/images]
+ifndef::is-html-doc[:imagesdir: {ROOT_PATH}/../resources/images]
+
+[#com_github_docastest_docformatter_asciidocformattertest_should_add_an_attribute]
+= Attribute
+
+
+[red]##_Usage_##
+[source,java,indent=0]
+----
+        output = formatter.attribute("MY_ATTRIBUTE", "The value");
+----
+
+[red]##_Render_##
+
+:MY_ATTRIBUTE: The value
+
+[red]##_Asciidoc generated_##
+------
+:MY_ATTRIBUTE: The value
+------
+
+___
+
+

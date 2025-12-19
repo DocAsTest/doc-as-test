@@ -1,0 +1,20 @@
+ifndef::ROOT_PATH[:ROOT_PATH: ../../../..]
+
+[#com_github_docastest_codeextraction_codepathtest_path_from_a_nested_class]
+= Path from a nested class
+
+.Code
+
+[source,java,indent=0]
+----
+        final Class<?> clazz = com.github.docastest.samples.MyTestWithNestedClass.MyNestedClass.class;
+        final Path path = CodePath.toPath(clazz);
+        final String pathText = DocPath.toAsciiDoc(path);
+
+----
+
+Result
+====
+com/github/docastest/samples/MyTestWithNestedClass.java
+====
+

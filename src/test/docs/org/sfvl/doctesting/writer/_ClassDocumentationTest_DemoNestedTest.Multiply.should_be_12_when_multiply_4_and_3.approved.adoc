@@ -1,0 +1,7 @@
+ifndef::ROOT_PATH[:ROOT_PATH: ../../../../..]
+
+[#com_github_docastest_doctesting_writer_classdocumentationtest_demonestedtest_multiply_should_be_12_when_multiply_4_and_3]
+= Multiply 2 simple numbers
+
+4 * 3 = 12
+

@@ -1,0 +1,35 @@
+ifndef::ROOT_PATH[:ROOT_PATH: ../../../..]
+
+[#com_github_docastest_codeextraction_parsedclassrepositorytest_parsed_classes_only_once]
+= Parsed classes only once
+
+The `ParsedClassRepository` have a cache to avoid parsing twice the same class.
+
+Below, we show calls to `parse` method when we call a method of `ParsedClassRepository`.
+`clearCache` method clears the cache and classes need to parse again.
+
+====
+* clearCache()
+* getComment(ApprovalsExtensionTest.class)
+** *parse(com.github.docastest.doctesting.junitextension, ApprovalsExtensionTest.java.class)*
+* getComment(DocPathTest.class)
+** *parse(com.github.docastest.doctesting.utils, DocPathTest.java.class)*
+* getComment(ApprovalsExtensionTest.class)
+* getComment(ApprovalsExtensionTest.class, using_extension)
+* getComment(FailureReporterTest.class)
+** *parse(com.github.docastest.doctesting.junitextension, FailureReporterTest.java.class)*
+* clearCache()
+* getComment(ApprovalsExtensionTest.class)
+** *parse(com.github.docastest.doctesting.junitextension, ApprovalsExtensionTest.java.class)*
+====
+
+++++
+<style>
+#com_github_docastest_codeextraction_parsedclassrepositorytest_parsed_classes_only_once ~ .inline {
+   display: inline-block;
+   vertical-align: top;
+   margin-right: 2em;
+}
+</style>
+++++
+

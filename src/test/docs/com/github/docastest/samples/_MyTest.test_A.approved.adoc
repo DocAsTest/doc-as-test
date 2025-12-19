@@ -1,0 +1,7 @@
+ifndef::ROOT_PATH[:ROOT_PATH: ../../../..]
+
+[#com_github_docastest_samples_mytest_test_a]
+= Test A
+
+In my *test*
+

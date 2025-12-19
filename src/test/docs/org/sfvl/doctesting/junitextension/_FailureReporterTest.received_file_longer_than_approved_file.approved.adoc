@@ -1,0 +1,31 @@
+ifndef::ROOT_PATH[:ROOT_PATH: ../../../../..]
+
+[#com_github_docastest_doctesting_junitextension_failurereportertest_received_file_longer_than_approved_file]
+= Received file longer than approved file
+
+When the received file is longer than the approved file,
+We indicate that there is no more lines.
+
+.Received text
+....
+= Title
+Description
+Footer
+....
+.Approved text
+....
+= Title
+Description
+....
+.Report
+....
+Differences between files:
+    Approved: [TEMPORARY FOLDER]/files/approved.adoc
+    Received: [TEMPORARY FOLDER]/files/received.adoc
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+3 (no line)
+=================================================================
+3: Footer
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+....
+

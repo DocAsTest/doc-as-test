@@ -1,0 +1,101 @@
+package com.github.docastest.codeextraction;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInfo;
+import org.junit.jupiter.api.extension.RegisterExtension;
+import com.github.docastest.docformatter.asciidoc.AsciidocFormatter;
+import com.github.docastest.docformatter.Formatter;
+import com.github.docastest.doctesting.junitextension.ApprovalsExtension;
+import com.github.docastest.doctesting.junitextension.SimpleApprovalsExtension;
+import com.github.docastest.doctesting.utils.ClassToDocument;
+import com.github.docastest.doctesting.utils.DocPath;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+@DisplayName("Class finder")
+@ClassToDocument(clazz = ClassFinder.class)
+public class ClassFinderTest {
+
+    Formatter formatter = new AsciidocFormatter();
+
+    @RegisterExtension
+    static ApprovalsExtension doc = new SimpleApprovalsExtension();
+
+    @Test
+    public void find_test_classes_in_a_package(TestInfo testInfo) {
+        // >>>
+        List<Class<?>> classes = new ClassFinder().classesWithAnnotatedMethod(
+                com.github.docastest.doctesting.sample.SimpleClass.class.getPackage(),
+                Test.class);
+        // <<<
+
+        final String classesFound = classes.stream()
+                .map(Class::getCanonicalName)
+                .map(s -> String.format("* %s", s))
+                .collect(Collectors.joining("\n", "", "\n"));
+
+        final AsciidocFormatter formatter = new AsciidocFormatter();
+        doc.write(".Source code to find classes containing tests",
+                formatter.sourceCode(com.github.docastest.codeextraction.CodeExtractor.extractPartOfMethod(testInfo.getTestMethod().get())),
+                "Classes found:",
+                "",
+                classesFound);
+    }
+
+    /**
+     * By default, all classes containing a test method are found.
+     * It's possible to exclude some test methods because they are not relevant in the context.
+     * If all test methods of a class are excluded, then the class will not be return as a found class.
+     */
+    @Test
+    @DisplayName("Find test classes in a package with a filter")
+    public void find_test_classes_in_a_package_with_filter(TestInfo testInfo) {
+        // >>>
+        List<Class<?>> classes = new ClassFinder().classesWithAnnotatedMethod(
+                com.github.docastest.doctesting.sample.SimpleClass.class.getPackage(),
+                Test.class,
+                m -> !m.getDeclaringClass().getSimpleName().startsWith("Second"));
+        // <<<
+
+        final String classesFound = classes.stream()
+                .map(Class::getCanonicalName)
+                .map(s -> String.format("* %s", s))
+                .collect(Collectors.joining("\n", "", "\n"));
+
+        final AsciidocFormatter formatter = new AsciidocFormatter();
+        doc.write("Here, we exclude all method in a class with name starting by 'Second'.",
+                ".Source code to find classes containing tests",
+                formatter.sourceCode(com.github.docastest.codeextraction.CodeExtractor.extractPartOfMethod(testInfo.getTestMethod().get())),
+                "Classes found:",
+                "",
+                classesFound);
+    }
+
+    @Test
+    public void find_root_class_from_enclosing_class() {
+        // >>>
+        final ClassFinder finder = new ClassFinder();
+        Class<?> clazz = finder.getMainFileClass(FirstClass.SecondClass.ThirdClass.class);
+        // <<<
+
+        doc.write(".Class used",
+                formatter.sourceCode(com.github.docastest.codeextraction.CodeExtractor.extractPartOfFile(new DocPath(this.getClass()).test().path(), clazz.getSimpleName())),
+                ".Code to find root class from an enclosing class",
+                com.github.docastest.codeextraction.CodeExtractor.extractPartOfCurrentMethod(),
+                ".Result",
+                formatter.sourceCode(clazz.getSimpleName()));
+    }
+
+}
+
+// >>>FirstClass
+class FirstClass {
+    class SecondClass {
+        class ThirdClass {
+
+        }
+    }
+}
+// <<<FirstClass

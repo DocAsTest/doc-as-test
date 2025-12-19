@@ -1,0 +1,86 @@
+ifndef::ROOT_PATH[:ROOT_PATH: .]
+ifdef::is-html-doc[:imagedir: .]
+ifndef::is-html-doc[:imagedir: {ROOT_PATH}/../resources]
+:stylesdir: {imagedir}/styles
+
+++++
+<style>
+.icon-header .imageblock {
+    display: inline-block;
+    margin-left: 5px;
+}
+.icon-header {
+    display: flex;
+    justify-content: flex-end;
+
+    position: absolute;
+ifdef::is-html-doc[]
+    top: -4.5em;
+endif::[]
+ifndef::is-html-doc[]
+    top: 1.5em;
+endif::[]
+    right: 2em;
+}
+</style>
+++++
+
+[.icon-header]
+--
+image::{imagedir}/github.svg[link={github-repo}, width=30px]
+--
+
+[.intro]
+--
+A java library that make your living documentation your non regression tests
+--
+
+[.button_link]
+link:{ROOT_PATH}/{TUTORIAL_HTML}[GET STARTED]
+
+.How to guides
+[.section]
+--
+[.subtitle]
+Problem-oriented
+
+Section link:{ROOT_PATH}/{HOW_TO_HTML}[How to]
+shows how to do some common needs.
+--
+
+.Explanation
+[.section]
+--
+[.subtitle]
+Understanding-oriented
+
+* link:{ROOT_PATH}/{APPROVAL_EXTENSION_HTML}[JUnit Approvals extension] creates documents from tests and validates them
+
+// * Generation of a general documentation that aggregate all test files
+//* Tools to extract parts of code
+* An link:{ROOT_PATH}/{ASCIIDOC_FORMATTER_HTML}[AsciiDoc formatter] is an implementation of the markup API to format the output
+
+* Tools to extract code can be found in link:{ROOT_PATH}/{CODE_EXTRACTION_HTML}[codeextraction package]
+--
+
+.Reference
+[.section]
+--
+[.subtitle]
+Information-oriented
+
+* link:{ROOT_PATH}/{DOC_TESTING_DOCUMENTATION_HTML}[Doc testing documentation]
+: Tools to make test validating generated files.
+* link:{ROOT_PATH}/{ASCIIDOC_FORMATTER_HTML}[Asciidoc formatter]
+: Utilities to format documentation.
+* link:{ROOT_PATH}/{DEVELOPMENT}[Developers]
+: Information for library developers.
+* link:{ROOT_PATH}/{KNOWN_ISSUES_HTML}[Known issues]
+--
+
+[subs=attributes+]
+++++
+<style>
+include::{stylesdir}/index_page.css[]
+</style>
+++++

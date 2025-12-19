@@ -1,0 +1,21 @@
+ifndef::ROOT_PATH[:ROOT_PATH: ../../../../..]
+
+[#com_github_docastest_doctesting_junitextension_demonestedtest]
+= Demo nested test
+
+Demo of a simple usage to generate documentation.
+
+[#com_github_docastest_doctesting_junitextension_demonestedtest_adding]
+== Adding
+
+Document of Addition operations.
+
+include::_DemoNestedTest.Adding.should_be_5_when_adding_2_and_3.approved.adoc[leveloffset=+2]
+
+include::_DemoNestedTest.Adding.should_be_9_when_adding_2_3_and_4.approved.adoc[leveloffset=+2]
+
+[#com_github_docastest_doctesting_junitextension_demonestedtest_multiply]
+== Multiply
+
+include::_DemoNestedTest.Multiply.should_be_12_when_multiply_4_and_3.approved.adoc[leveloffset=+2]
+

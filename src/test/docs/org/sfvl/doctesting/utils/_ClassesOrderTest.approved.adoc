@@ -1,0 +1,11 @@
+ifndef::ROOT_PATH[:ROOT_PATH: ../../../../..]
+
+[#com_github_docastest_doctesting_utils_classesordertest]
+= Classes order
+
+include::_ClassesOrderTest.in_order.approved.adoc[leveloffset=+1]
+
+include::_ClassesOrderTest.filter_methods_and_classes.approved.adoc[leveloffset=+1]
+
+include::_ClassesOrderTest.nested_class_using_outer_method.approved.adoc[leveloffset=+1]
+

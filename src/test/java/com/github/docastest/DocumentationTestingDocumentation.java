@@ -1,0 +1,78 @@
+package com.github.docastest;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.api.extension.RegisterExtension;
+import com.github.docastest.codeextraction.CodeExtractionPackage;
+import com.github.docastest.development.Development;
+import com.github.docastest.docformatter.AsciidocFormatterTest;
+import com.github.docastest.docformatter.Formatter;
+import com.github.docastest.docformatter.asciidoc.AsciidocFormatter;
+import com.github.docastest.doctesting.DocTestingDocumentation;
+import com.github.docastest.doctesting.junitextension.ApprovalsExtension;
+import com.github.docastest.doctesting.junitextension.ApprovalsExtensionTest;
+import com.github.docastest.doctesting.junitextension.HtmlPageExtension;
+import com.github.docastest.doctesting.junitextension.SimpleApprovalsExtension;
+import com.github.docastest.doctesting.utils.Config;
+import com.github.docastest.doctesting.utils.DocPath;
+import com.github.docastest.doctesting.utils.NoTitle;
+import com.github.docastest.howto.HowTo;
+import com.github.docastest.howto.KnownIssues;
+import com.github.docastest.howto.Tutorial;
+
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+@DisplayName(value = "Documentation Testing Library")
+@ExtendWith(DocumentationTestingDocumentation.HtmlPage.class)
+public class DocumentationTestingDocumentation {
+
+    static class HtmlPage extends HtmlPageExtension {
+        @Override
+        public String content(Class<?> clazz) {
+            return String.join("\n",
+                    doc.getDocWriter().defineDocPath(Paths.get(".")),
+                    ":nofooter:",
+                    super.content(clazz));
+        }
+
+        @Override
+        public Path getFilePath(Class<?> clazz) {
+            return Config.DOC_PATH.resolve("index.adoc");
+        }
+    }
+
+    @RegisterExtension
+    static ApprovalsExtension doc = new SimpleApprovalsExtension();
+
+    private final Formatter formatter = new AsciidocFormatter();
+
+    @Test
+    @NoTitle
+    public void documentationTesting() {
+        doc.write(getContent());
+    }
+
+    public String getContent() {
+        final DocPath docPath = new DocPath(Paths.get(""), "indexContent");
+        final Path from = docPath.resource().from(new DocPath(this.getClass()).approved());
+
+        return String.join("\n",
+                formatter.attribute("TUTORIAL_HTML", htmlPath(Tutorial.class)),
+                formatter.attribute("HOW_TO_HTML", htmlPath(HowTo.class)),
+                formatter.attribute("APPROVAL_EXTENSION_HTML", htmlPath(ApprovalsExtensionTest.class)),
+                formatter.attribute("ASCIIDOC_FORMATTER_HTML", htmlPath(AsciidocFormatterTest.class)),
+                formatter.attribute("CODE_EXTRACTION_HTML", htmlPath(CodeExtractionPackage.class)),
+                formatter.attribute("DOC_TESTING_DOCUMENTATION_HTML", htmlPath(DocTestingDocumentation.class)),
+                formatter.attribute("DEVELOPMENT", htmlPath(Development.class)),
+                formatter.attribute("KNOWN_ISSUES_HTML", htmlPath(KnownIssues.class)),
+                String.format("include::%s[leveloffset=+1]", DocPath.toAsciiDoc(from))
+        );
+    }
+
+    private String htmlPath(Class<?> clazz) {
+        return DocPath.toAsciiDoc(new DocPath(clazz).html().path());
+    }
+
+}

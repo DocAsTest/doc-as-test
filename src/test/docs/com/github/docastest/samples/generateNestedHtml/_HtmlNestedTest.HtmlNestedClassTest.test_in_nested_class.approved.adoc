@@ -1,0 +1,7 @@
+ifndef::ROOT_PATH[:ROOT_PATH: ../../../../..]
+
+[#com_github_docastest_samples_generatenestedhtml_htmlnestedtest_htmlnestedclasstest_test_in_nested_class]
+= Test in nested class
+
+In my *test* in nested class
+

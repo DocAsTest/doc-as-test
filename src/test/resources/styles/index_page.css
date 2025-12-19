@@ -1,0 +1,84 @@
+/*
+body {
+    background: yellow;
+    color: blue;
+}*/
+
+:root {
+ /* --bg1: #05fdCC;
+  --bg2: #0fd289;
+*/
+  --bg1: #ffffff;
+  --bg2: #8effd5;
+  --logo-height: 100px
+  --shadow_color: #084f34;
+  --title-color: #7a2518;
+  --text-color: #444444;
+}
+
+.section {
+    margin: 1em;
+    padding: 1em;
+    background-color: var(--bg1);
+    box-shadow: 5px 5px 5px var(--shadow_color);
+}
+.section .title {
+    font-size: 2em;
+}
+.section .subtitle {
+    color: #888888;
+}
+
+.intro {
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.intro p {
+    font-size: 1.5em;
+    font-style: italic;
+    color: #0c6a47;
+}
+
+body {
+    background: var(--bg2);
+    color: var(--text-color);
+}
+
+#header > h1:only-child, body.toc2 #header > h1:nth-last-child(2) {
+    border-bottom: 1px solid var(--title-color);
+}
+
+ifdef::is-html-doc[]
+#header > h1:only-child
+endif::[]
+ifndef::is-html-doc[]
+#content > h1:first-child:not([class]) /* In Intellij viewer */
+endif::[]
+{
+    border-bottom-width: 0px;
+
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.button_link p {
+    text-align: center;
+    letter-spacing: 0.3em;
+}
+
+.button_link a:hover {
+    background-color: #13ae75;
+}
+
+.button_link a {
+    padding: 0.75em 2em;
+    border-radius: 2em;
+    display: inline-block;
+    color: #000;
+    background-color: #0e9361;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 5px --var(shadow_color);
+    text-decoration: none;
+}

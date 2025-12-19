@@ -1,0 +1,58 @@
+ifndef::ROOT_PATH[:ROOT_PATH: ../../../..]
+
+[#com_github_docastest_howto_useyourownstyle_define_a_custom_style]
+= Define a custom style
+
+You can customize style adding a css style directly in your file.
+You need to put an html style tag (`<style></style>`) enclosed in `\++++++`
+to add it without processed content and send it directly to the output.
+
+.Asciidoc content
+[source,html,indent=0]
+----
+++++
+<style>
+.withColor {
+   color: blue;
+}
+</style>
+++++
+This text should be black.
+
+[.withColor]#This text shoud be blue.#
+
+This text should be black.
+
+[.withColor]
+--
+This section formed by several lines in asciidoc
+should be blue.
+--
+This text should be black.
+----
+
+.Content rendering
+====
+++++
+<style>
+.withColor {
+   color: blue;
+}
+</style>
+++++
+This text should be black.
+
+[.withColor]#This text shoud be blue.#
+
+This text should be black.
+
+[.withColor]
+--
+This section formed by several lines in asciidoc
+should be blue.
+--
+This text should be black.
+====
+
+
+

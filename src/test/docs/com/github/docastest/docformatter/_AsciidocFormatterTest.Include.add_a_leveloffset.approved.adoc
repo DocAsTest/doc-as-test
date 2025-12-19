@@ -1,0 +1,24 @@
+ifndef::ROOT_PATH[:ROOT_PATH: ../../../..]
+ifdef::is-html-doc[:imagesdir: {ROOT_PATH}/images]
+ifndef::is-html-doc[:imagesdir: {ROOT_PATH}/../resources/images]
+
+[#com_github_docastest_docformatter_asciidocformattertest_include_add_a_leveloffset]
+= Add a leveloffset
+
+
+[red]##_Usage_##
+[source,java,indent=0]
+----
+            final String fileToInclude = "tmp/anotherFile.adoc";
+            writeAFile(fileToInclude, "Text from another file included in this one");
+            output = formatter.include(fileToInclude, 2);
+----
+
+[red]##_Asciidoc generated_##
+------
+\include::tmp/anotherFile.adoc[leveloffset=+2]
+------
+
+___
+
+

@@ -1,0 +1,7 @@
+ifndef::ROOT_PATH[:ROOT_PATH: ../../../..]
+
+[#com_github_docastest_doctesting_doctestingdocumentation]
+= Doc testing documentation
+
+include::_DocTestingDocumentation.doc.approved.adoc[leveloffset=+1]
+

@@ -1,0 +1,60 @@
+ifndef::ROOT_PATH[:ROOT_PATH: ../../../../..]
+
+[#com_github_docastest_doctesting_utils_docwritertest_doc_writer_with_a_class]
+= Output with a class
+
+DocWriter is also used to format output of a test class.
+In that case, we add a title and include all test files of the class.
+What is written on DocWriter is not used in this case.
+
+.Class used
+
+[source,java,indent=0]
+----
+
+public class MyTestWithTests {
+    @RegisterExtension
+    static final ApprovalsExtension doc = new SimpleApprovalsExtension();
+
+    @Test
+    public void test_A() {
+    }
+    @Test
+    public void test_B() {
+    }
+    @Test
+    public void test_C() {
+    }
+
+}
+----
+
+
+.DocWriter usage
+
+[source,java,indent=0]
+----
+        final DocWriter doc = new DocWriter();
+
+        final Class<?> clazz = MyTestWithTests.class;
+        final String output = doc.formatOutput(clazz);
+
+----
+
+
+.Output provided
+....
+ifndef::ROOT_PATH[:ROOT_PATH: ../../../..]
+
+[#com_github_docastest_samples_mytestwithtests]
+= My test with tests
+
+\include::_MyTestWithTests.test_A.approved.adoc[leveloffset=+1]
+
+\include::_MyTestWithTests.test_B.approved.adoc[leveloffset=+1]
+
+\include::_MyTestWithTests.test_C.approved.adoc[leveloffset=+1]
+
+
+....
+

@@ -1,0 +1,7 @@
+ifndef::ROOT_PATH[:ROOT_PATH: ../../../../..]
+
+[#com_github_docastest_doctesting_writer_inmaindocbistest_testx]
+= Title for this test
+
+In my *test*
+

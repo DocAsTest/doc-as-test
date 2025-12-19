@@ -1,0 +1,31 @@
+ifndef::ROOT_PATH[:ROOT_PATH: ../../../..]
+ifdef::is-html-doc[:imagesdir: {ROOT_PATH}/images]
+ifndef::is-html-doc[:imagesdir: {ROOT_PATH}/../resources/images]
+
+[#com_github_docastest_docformatter_asciidocformattertest_asciidoclist_should_format_one_list_item]
+= One list item
+
+
+[red]##_Usage_##
+[source,java,indent=0]
+----
+            output = formatter.listItem("First")
+                    + formatter.listItem("Second");
+----
+
+[red]##_Render_##
+
+
+* First
+* Second
+
+[red]##_Asciidoc generated_##
+------
+
+* First
+* Second
+------
+
+___
+
+

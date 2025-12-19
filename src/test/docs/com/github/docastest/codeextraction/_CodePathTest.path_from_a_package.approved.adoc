@@ -1,0 +1,20 @@
+ifndef::ROOT_PATH[:ROOT_PATH: ../../../..]
+
+[#com_github_docastest_codeextraction_codepathtest_path_from_a_package]
+= Path from a package
+
+.Code
+
+[source,java,indent=0]
+----
+        final Class<?> clazz = com.github.docastest.samples.MyTest.class;
+        final Path path = CodePath.toPath(clazz.getPackage());
+        final String pathText = DocPath.toAsciiDoc(path);
+
+----
+
+Result
+====
+com/github/docastest/samples
+====
+

@@ -1,0 +1,12 @@
+ifndef::ROOT_PATH[:ROOT_PATH: ../..]
+
+:TUTORIAL_HTML: com/github/docastest/howto/Tutorial.html
+:HOW_TO_HTML: com/github/docastest/howto/HowTo.html
+:APPROVAL_EXTENSION_HTML: com/github/docastest/doctesting/junitextension/ApprovalsExtensionTest.html
+:ASCIIDOC_FORMATTER_HTML: com/github/docastest/docformatter/AsciidocFormatterTest.html
+:CODE_EXTRACTION_HTML: com/github/docastest/codeextraction/CodeExtractionPackage.html
+:DOC_TESTING_DOCUMENTATION_HTML: com/github/docastest/doctesting/DocTestingDocumentation.html
+:DEVELOPMENT: com/github/docastest/development/Development.html
+:KNOWN_ISSUES_HTML: com/github/docastest/howto/KnownIssues.html
+include::../../../resources/indexContent.adoc[leveloffset=+1]
+

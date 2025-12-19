@@ -1,0 +1,23 @@
+ifndef::ROOT_PATH[:ROOT_PATH: ../../../../..]
+
+[#com_github_docastest_doctesting_utils_printertest_groupbyresult_applying_a_function]
+= Applying a function
+
+
+[source,java,indent=0]
+----
+            final Map<String, List<String>> stringListMap = Printer.groupByResult(
+                    String::toLowerCase,
+                    Arrays.asList("abc", "ABC", "XyZ", "Abc")
+            );
+
+----
+
+You obtain a map with value returned by the function as key and a list of values that provides the key value.
+
+*abc*: `abc`, `ABC`, `Abc`
+ +
+*xyz*: `XyZ`
+ +
+
+

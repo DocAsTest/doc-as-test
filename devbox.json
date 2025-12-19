@@ -1,0 +1,14 @@
+{
+  "packages": [
+    "jdk@11",
+    "maven@3.9.1",
+  ],
+  "shell": {
+    "init_hook": null,
+    "scripts": {
+      "test": [
+        "mvn test"
+      ]
+    }
+  }
+}
