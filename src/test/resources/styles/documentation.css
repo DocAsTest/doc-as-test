@@ -4,11 +4,12 @@ includeblock: format an include as a block.
 */
 
 :root {
-  --bg1: #05fdCC;
-  --bg2: #0fd289;
+  --bg1: white;
+  --bg2: #cefbd7;
   --logo-height: 100;
   --shadow-color: #084f34;
   --title-color: #7a2518;
+  --code-background-color: #222222;
 
   --media-small-header-height:50px;
 }
@@ -34,7 +35,7 @@ th.tableblock {
 
 #toc.toc2, #project_home {
     background: var(--bg2);
-    box-shadow: 5px 5px 5px var(--shadow_color);
+    box-shadow: 5px 5px 5px var(--shadow-color);
     font-size: 1.1em;
     width: 260px; /* Do not use 'em' to be independent of the font-size */
     padding: 1.25em 1em;
@@ -93,8 +94,8 @@ h2 {
 
 .listingblock .content pre,
 .listingblock .content pre:not(.highlight) {
-    background: var(--title-color);
-    box-shadow: 5px 5px 5px var(--shadow_color);
+    background: var(--code-background-color);
+    box-shadow: 5px 5px 5px var(--shadow-color);
 }
 
 /* Remove margin for listingblock in table */
@@ -105,14 +106,14 @@ td.tableblock > .content > .listingblock {
 .includeblock{
     padding: 1em;
     background: #fffef7;
-    box-shadow: 5px 5px 5px var(--shadow_color);
+    box-shadow: 5px 5px 5px var(--shadow-color);
 }
 
 .literalblock pre,
 .listingblock > .content > pre:not(.highlight),
 .exampleblock > .content {
     background: var(--bg2);
-    box-shadow: 5px 5px 5px var(--shadow_color);
+    box-shadow: 5px 5px 5px var(--shadow-color);
 }
 
 /* Menu */
@@ -128,7 +129,7 @@ td.tableblock > .content > .listingblock {
 }
 .sectlevel1>li.menu_open {
     font-weight: bold;
-    background-color: var(--bg1);
+    background-color: var(--bg2);
     padding: 0.5em;
 }
 
