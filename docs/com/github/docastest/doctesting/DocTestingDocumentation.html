@@ -1,0 +1,3912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.10">
+<title>Doc testing documentation</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+/* Uncomment @import statement to use as custom stylesheet */
+/*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}
+audio,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+a{background:none}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+dfn{font-style:italic}
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,*::before,*::after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0;direction:ltr}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:0}
+p{font-family:inherit;font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
+ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
+ul.square{list-style-type:square}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+abbr,acronym{text-transform:uppercase;font-size:90%;color:rgba(0,0,0,.8);border-bottom:1px dotted #ddd;cursor:help}
+abbr{text-transform:none}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote cite{display:block;font-size:.9375em;color:rgba(0,0,0,.6)}
+blockquote cite::before{content:"\2014 \0020"}
+blockquote cite a,blockquote cite a:visited{color:rgba(0,0,0,.6)}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
+table thead,table tfoot{background:#f7f8f7}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt{background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
+.clearfix::after,.float-group::after{clear:both}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
+:not(pre)>code.nobreak{word-wrap:normal}
+:not(pre)>code.nowrap{white-space:nowrap}
+pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
+pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
+pre>code{display:block}
+pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
+em em{font-style:normal}
+strong strong{font-weight:400}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
+b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
+b.button::before{content:"[";padding:0 3px 0 2px}
+b.button::after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
+#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
+#content{margin-top:1.25em}
+#content::before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
+#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span::before{content:"\00a0\2013\00a0"}
+#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark::before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber::after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #dddddf;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #e7e7e9;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+#toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9;left:auto;right:0}}
+@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:100%;background:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:rgba(255,255,255,.8);line-height:1.44}
+#content{margin-bottom:.625em}
+.sect1{padding-bottom:.625em}
+@media screen and (min-width:768px){#content{margin-bottom:1.25em}
+.sect1{padding-bottom:1.25em}}
+.sect1:last-child{padding-bottom:0}
+.sect1+.sect1{border-top:1px solid #e7e7e9}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+details>summary:first-of-type{cursor:pointer;display:list-item;outline:none;margin-bottom:.75em}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
+.paragraph.lead>p,#preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
+table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:inherit}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6)}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
+.exampleblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child{margin-bottom:0}
+.sidebarblock{border-style:solid;border-width:1px;border-color:#dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;-webkit-border-radius:4px;border-radius:4px}
+.sidebarblock>:first-child{margin-top:0}
+.sidebarblock>:last-child{margin-bottom:0}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock>.content>pre{-webkit-border-radius:4px;border-radius:4px;word-wrap:break-word;overflow-x:auto;padding:1em;font-size:.8125em}
+@media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
+@media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
+.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class="highlight"],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
+.literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
+.listingblock:hover code[data-lang]::before{display:block}
+.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
+.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;-webkit-border-radius:4px;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.prettyprint{background:#f7f7f8}
+pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
+pre.prettyprint li{background:none;list-style-type:inherit;padding-left:0}
+pre.prettyprint li code[data-lang]::before{opacity:1}
+pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
+table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
+table.linenotable td.code{padding-left:.75em}
+table.linenotable td.linenos{border-right:1px solid currentColor;opacity:.35;padding-right:.5em}
+pre.pygments .lineno{border-right:1px solid currentColor;opacity:.35;display:inline-block;margin-right:.75em}
+pre.pygments .lineno::before{content:"";margin-right:-.125em}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
+.verseblock{margin:0 1em 1.25em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract blockquote::before,.quoteblock.excerpt blockquote::before,.quoteblock .quoteblock blockquote::before{display:none}
+.quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
+.quoteblock.abstract{margin:0 1em 1.25em;display:block}
+.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
+.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
+.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;text-align:left;margin-right:0}
+table.tableblock{max-width:100%;border-collapse:separate}
+p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content>:last-child{margin-bottom:-1.25em}
+td.tableblock>.content>:last-child.sidebarblock{margin-bottom:0}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all>thead>tr>.tableblock,table.grid-all>tbody>tr>.tableblock{border-width:0 1px 1px 0}
+table.grid-all>tfoot>tr>.tableblock{border-width:1px 1px 0 0}
+table.grid-cols>*>tr>.tableblock{border-width:0 1px 0 0}
+table.grid-rows>thead>tr>.tableblock,table.grid-rows>tbody>tr>.tableblock{border-width:0 0 1px}
+table.grid-rows>tfoot>tr>.tableblock{border-width:1px 0 0}
+table.grid-all>*>tr>.tableblock:last-child,table.grid-cols>*>tr>.tableblock:last-child{border-right-width:0}
+table.grid-all>tbody>tr:last-child>.tableblock,table.grid-all>thead:last-child>tr>.tableblock,table.grid-rows>tbody>tr:last-child>.tableblock,table.grid-rows>thead:last-child>tr>.tableblock{border-bottom-width:0}
+table.frame-all{border-width:1px}
+table.frame-sides{border-width:0 1px}
+table.frame-topbot,table.frame-ends{border-width:1px 0}
+table.stripes-all tr,table.stripes-odd tr:nth-of-type(odd),table.stripes-even tr:nth-of-type(even),table.stripes-hover tr:hover{background:#f8f8f7}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+ul.checklist{margin-left:.625em}
+ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist li>p:first-child>input[type="checkbox"]:first-child{margin-right:.25em}
+ul.inline{display:-ms-flexbox;display:-webkit-box;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
+ul.inline>li{margin-left:1.25em}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
+.colist td:not([class]):first-child img{max-width:none}
+.colist td:not([class]):last-child{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
+.imageblock.left{margin:.25em .625em 1.25em 0}
+.imageblock.right{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+.gist .file-data>table{border:0;background:#fff;width:100%;margin-bottom:0}
+.gist .file-data>table td.line-data{width:99%}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background:#00fafa}
+.black{color:#000}
+.black-background{background:#000}
+.blue{color:#0000bf}
+.blue-background{background:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background:#fa00fa}
+.gray{color:#606060}
+.gray-background{background:#7d7d7d}
+.green{color:#006000}
+.green-background{background:#007d00}
+.lime{color:#00bf00}
+.lime-background{background:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background:#7d0000}
+.navy{color:#000060}
+.navy-background{background:#00007d}
+.olive{color:#606000}
+.olive-background{background:#7d7d00}
+.purple{color:#600060}
+.purple-background{background:#7d007d}
+.red{color:#bf0000}
+.red-background{background:#fa0000}
+.silver{color:#909090}
+.silver-background{background:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background:#fafa00}
+span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);-webkit-border-radius:100px;border-radius:100px;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]::after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,span.alt{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@page{margin:1.25cm .75cm}
+@media print{*{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
+html{font-size:80%}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]::after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span::before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]::before{display:block}
+#footer{padding:0 .9375em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+@media print,amzn-kf8{#header>h1:first-child{margin-top:1.25rem}
+.sect1{padding:0!important}
+.sect1+.sect1{border:0}
+#footer{background:none}
+#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
+@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+</style>
+</head>
+<body id="com_github_docastest_doctesting_doctestingdocumentation" class="article toc2 toc-left">
+<div id="header">
+<h1>Doc testing documentation</h1>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#com_github_docastest_doctesting_junitextension_approvalsextensiontest">Approvals extension</a>
+<ul class="sectlevel2">
+<li><a href="#com_github_docastest_doctesting_junitextension_approvalsextensiontest_using_extension">Creating a test using ApprovalsExtension</a></li>
+<li><a href="#com_github_docastest_doctesting_junitextension_approvalsextensiontest_using_displayname">Using displayName</a></li>
+<li><a href="#com_github_docastest_doctesting_junitextension_approvalsextensiontest_hide_title">Hide title</a>
+<ul class="sectlevel3">
+<li><a href="#_rendering_of_the_result">Rendering of the result</a>
+<ul class="sectlevel4">
+<li><a href="#com_github_docastest_samples_mytestwithouttitleononetest">My test without title on one test</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#com_github_docastest_doctesting_junitextension_approvalsextensiontest_using_a_custom_writer">Using a custom writer</a></li>
+<li><a href="#com_github_docastest_doctesting_junitextension_approvalsextensiontest_using_a_custom_formatter">Using a custom formatter</a></li>
+<li><a href="#com_github_docastest_doctesting_junitextension_approvalsextensiontest_nested_class">Nested class</a>
+<ul class="sectlevel3">
+<li><a href="#_rendering">Rendering</a>
+<ul class="sectlevel4">
+<li><a href="#com_github_docastest_doctesting_junitextension_demonestedtest">Demo nested test</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#com_github_docastest_doctesting_junitextension_approvalsextensiontest_document_with_all_tests_in_a_testclass">Document with all tests in a testclass</a>
+<ul class="sectlevel3">
+<li><a href="#com_github_docastest_samples_mytest">My test</a>
+<ul class="sectlevel4">
+<li><a href="#com_github_docastest_samples_mytest_test_a">Test A</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#com_github_docastest_doctesting_junitextension_approvalsextensiontest_failing_test_output">Failing test output</a></li>
+</ul>
+</li>
+<li><a href="#com_github_docastest_doctesting_junitextension_failurereportertest">Failure report</a>
+<ul class="sectlevel2">
+<li><a href="#com_github_docastest_doctesting_junitextension_failurereportertest_report_when_files_are_differents">Report when files are differents</a></li>
+<li><a href="#com_github_docastest_doctesting_junitextension_failurereportertest_report_when_files_are_identicals">Report when files are identicals</a></li>
+<li><a href="#com_github_docastest_doctesting_junitextension_failurereportertest_received_file_shorter_than_approved_file">Received file shorter than approved file</a></li>
+<li><a href="#com_github_docastest_doctesting_junitextension_failurereportertest_received_file_longer_than_approved_file">Received file longer than approved file</a></li>
+<li><a href="#com_github_docastest_doctesting_junitextension_failurereportertest_approved_file_does_not_exist">Approved file does not exist</a></li>
+</ul>
+</li>
+<li><a href="#com_github_docastest_doctesting_utils_classesordertest">Classes order</a>
+<ul class="sectlevel2">
+<li><a href="#com_github_docastest_doctesting_utils_classesordertest_in_order">In order</a></li>
+<li><a href="#com_github_docastest_doctesting_utils_classesordertest_filter_methods_and_classes">Filter methods and classes</a></li>
+<li><a href="#com_github_docastest_doctesting_utils_classesordertest_nested_class_using_outer_method">Nested class using outer method</a></li>
+</ul>
+</li>
+<li><a href="#com_github_docastest_doctesting_utils_configtest">Configuration</a>
+<ul class="sectlevel2">
+<li><a href="#com_github_docastest_doctesting_utils_configtest_available_properties">Available properties</a></li>
+<li><a href="#com_github_docastest_doctesting_utils_configtest_default_values">Default values</a></li>
+<li><a href="#com_github_docastest_doctesting_utils_configtest_load_path_from_config_file">Configuration file</a></li>
+</ul>
+</li>
+<li><a href="#com_github_docastest_doctesting_utils_docpathtest">Document path</a>
+<ul class="sectlevel2">
+<li><a href="#com_github_docastest_doctesting_utils_docpathtest_available_paths_from_docpath">Available paths from DocPath</a></li>
+<li><a href="#com_github_docastest_doctesting_utils_docpathtest_path_by_type">Path by type</a></li>
+<li><a href="#com_github_docastest_doctesting_utils_docpathtest_path_by_type_with_method">Path by type with method</a></li>
+<li><a href="#com_github_docastest_doctesting_utils_docpathtest_nested_class">Nested class</a></li>
+<li><a href="#com_github_docastest_doctesting_utils_docpathtest_make_path_independent_of_operating_system">Make path independent of operating system</a></li>
+<li><a href="#com_github_docastest_doctesting_utils_docpathtest_build_a_path">Build a path</a></li>
+</ul>
+</li>
+<li><a href="#com_github_docastest_doctesting_utils_docwritertest">DocWriter</a>
+<ul class="sectlevel2">
+<li><a href="#com_github_docastest_doctesting_utils_docwritertest_doc_writer_usage">Usage</a></li>
+<li><a href="#com_github_docastest_doctesting_utils_docwritertest_doc_writer_with_a_class">Output with a class</a></li>
+<li><a href="#com_github_docastest_doctesting_utils_docwritertest_doc_writer_without_title">Hide title</a></li>
+<li><a href="#com_github_docastest_doctesting_utils_docwritertest_format_title">Format title</a></li>
+<li><a href="#com_github_docastest_doctesting_utils_docwritertest_add_description_using_comment">Add a description</a></li>
+<li><a href="#com_github_docastest_doctesting_utils_docwritertest_customize_description">Customize description</a></li>
+</ul>
+</li>
+<li><a href="#com_github_docastest_doctesting_utils_printertest">Printer</a>
+<ul class="sectlevel2">
+<li><a href="#com_github_docastest_doctesting_utils_printertest_list_of_codes_and_values_they_provided">List of codes and values they provided</a></li>
+<li><a href="#com_github_docastest_doctesting_utils_printertest_show_result_with_code">Show result with code</a></li>
+<li><a href="#com_github_docastest_doctesting_utils_printertest_show_result_as_describe_with_code">Show result as describe with code</a></li>
+<li><a href="#com_github_docastest_doctesting_utils_printertest_groupbyresult">Group by result</a>
+<ul class="sectlevel3">
+<li><a href="#com_github_docastest_doctesting_utils_printertest_groupbyresult_description">Description</a></li>
+<li><a href="#com_github_docastest_doctesting_utils_printertest_groupbyresult_applying_a_function">Applying a function</a></li>
+<li><a href="#com_github_docastest_doctesting_utils_printertest_groupbyresult_using_code_and_result_class">Using code and result class</a></li>
+<li><a href="#com_github_docastest_doctesting_utils_printertest_groupbyresult_group_by_a_modified_value">Group by a modified value</a></li>
+</ul>
+</li>
+<li><a href="#com_github_docastest_doctesting_utils_printertest_extract_one_code_and_result">Extract one code and result</a></li>
+<li><a href="#com_github_docastest_doctesting_utils_printertest_extract_one_code_and_result_keep_format">Extract one code and result keep format</a></li>
+<li><a href="#com_github_docastest_doctesting_utils_printertest_simpletools">Simple tools</a>
+<ul class="sectlevel3">
+<li><a href="#com_github_docastest_doctesting_utils_printertest_simpletools_join_list_to_string">Join list to string</a></li>
+<li><a href="#com_github_docastest_doctesting_utils_printertest_simpletools_join_with_mapper">Join with mapper</a></li>
+<li><a href="#com_github_docastest_doctesting_utils_printertest_simpletools_join_with_separator">Join with separator</a></li>
+<li><a href="#com_github_docastest_doctesting_utils_printertest_simpletools_join_with_mapper_and_separator">Join with mapper and separator</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#com_github_docastest_doctesting_utils_svggraphtest">Svg graph</a>
+<ul class="sectlevel2">
+<li><a href="#com_github_docastest_doctesting_utils_svggraphtest_an_empty_grid">Generate an empty grid</a></li>
+<li><a href="#com_github_docastest_doctesting_utils_svggraphtest_specify_grid_size">Specify grid size</a></li>
+<li><a href="#com_github_docastest_doctesting_utils_svggraphtest_one_simple_line">Draw a single line</a></li>
+<li><a href="#com_github_docastest_doctesting_utils_svggraphtest_one_simple_line_with_negative_value">Draw a single line with negative values</a></li>
+<li><a href="#com_github_docastest_doctesting_utils_svggraphtest_one_line_with_negative_and_postive_values">Draw a single line with negative and positive values</a></li>
+<li><a href="#com_github_docastest_doctesting_utils_svggraphtest_one_line_with_float_values">Draw a single line with float values</a></li>
+<li><a href="#com_github_docastest_doctesting_utils_svggraphtest_multi_lines">Draw several lines</a></li>
+<li><a href="#com_github_docastest_doctesting_utils_svggraphtest_apply_factor_on_axes">Apply factor on axes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This document describes usage of classes to create test used to generate documentation.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#com_github_docastest_doctesting_junitextension_approvalsextensiontest">ApprovalsExtension</a>: JUnit extension to check document.</p>
+</li>
+<li>
+<p><a href="#com_github_docastest_doctesting_utils_docwritertest">DocWriter</a>: Store document before writting it.</p>
+</li>
+<li>
+<p><a href="#com_github_docastest_doctesting_utils_printertest">Printer</a>: Utilities for result presentation.</p>
+</li>
+<li>
+<p><a href="#com_github_docastest_doctesting_utils_svggraphtest">SvgGraph</a>: Create a svg graph.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="com_github_docastest_doctesting_junitextension_approvalsextensiontest">Approvals extension</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>JUnit5 extension that verify written document matches with approved one.</p>
+</div>
+<div class="paragraph">
+<p>It checks that everything written during test is identical to the approved content.</p>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_junitextension_approvalsextensiontest_using_extension">Creating a test using ApprovalsExtension</h3>
+<div class="paragraph">
+<p>This is an example to create a simple test using <code>ApprovalsExtension</code>.</p>
+</div>
+<div class="paragraph">
+<p>You have to write a class and add register an <code>ApprovalsExtension</code> attribute using <code>RegisterExtension</code> annotation.
+This extension will check that everything wrote using <code>write</code> method has not changed since the last execution.</p>
+</div>
+<div class="listingblock">
+<div class="title">Test example using <code>ApprovalsExtension</code></div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kn">package</span> <span class="nn">com.github.docastest.samples.justone</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">org.junit.jupiter.api.Test</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.jupiter.api.extension.RegisterExtension</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.github.docastest.doctesting.junitextension.ApprovalsExtension</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.github.docastest.doctesting.junitextension.SimpleApprovalsExtension</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">OneTest</span> <span class="o">{</span>
+    <span class="nd">@RegisterExtension</span>
+    <span class="kd">static</span> <span class="kd">final</span> <span class="nc">ApprovalsExtension</span> <span class="n">doc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SimpleApprovalsExtension</span><span class="o">();</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">test_A</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">doc</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="s">"In my *test*"</span><span class="o">);</span>
+    <span class="o">}</span>
+
+<span class="o">}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When executing test method <code>test_A</code>, the following text is generated.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>[#com_github_docastest_samples_justone_onetest_test_a]
+= Test A
+
+In my *test*</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If this content is identical to the <code>_OneTest.test_A.approved.adoc</code>, then the test is a success.
+Otherwise, test fails and the generated text is written to the <code>_OneTest.test_A.received.adoc</code> file.
+So we can compare those two files to see what has changed.</p>
+</div>
+<div class="paragraph">
+<p>File name and title come from method name.
+The chapter content contains what was written using <code>write</code>.</p>
+</div>
+<div class="paragraph">
+<p>Files are stored in <code>src/test/docs/com/github/docastest/samples/justone</code> directory which contains:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>_OneTest.approved.adoc</p>
+</li>
+<li>
+<p>_OneTest.test_A.approved.adoc</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>There is one file per test and one file for the class.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_junitextension_approvalsextensiontest_using_displayname">Using displayName</h3>
+<div class="paragraph">
+<p>You can use DisplayName annotation to customize test title</p>
+</div>
+<div class="listingblock">
+<div class="title">Test example using DisplayName</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="nd">@DisplayName</span><span class="o">(</span><span class="s">"Title for the document"</span><span class="o">)</span>
+<span class="kd">class</span> <span class="nc">UsingDisplayNameTest</span> <span class="o">{</span>
+    <span class="nd">@RegisterExtension</span>
+    <span class="kd">static</span> <span class="kd">final</span> <span class="nc">ApprovalsExtension</span> <span class="n">doc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SimpleApprovalsExtension</span><span class="o">();</span>
+
+    <span class="nd">@Test</span>
+    <span class="nd">@DisplayName</span><span class="o">(</span><span class="s">"Title for this test"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">test_A</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">doc</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="s">"In my *test*"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Generated file with DisplayName content as title</div>
+<div class="content">
+<pre>[#com_github_docastest_doctesting_junitextension_usingdisplaynametest_test_a]
+= Title for this test
+
+In my *test*</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_junitextension_approvalsextensiontest_hide_title">Hide title</h3>
+<div class="paragraph">
+<p>You can hide a test title adding the NoTitle annotation to the test.
+It&#8217;s usefull to reuse content of a test in different place without keeping the original structure.
+You also want to separate the content of one chapter through different test but display them under only title.</p>
+</div>
+<div class="listingblock">
+<div class="title">Test example using hiding title</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyTestWithoutTitleOnOneTest</span> <span class="o">{</span>
+    <span class="nd">@RegisterExtension</span>
+    <span class="kd">static</span> <span class="kd">final</span> <span class="nc">ApprovalsExtension</span> <span class="n">doc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SimpleApprovalsExtension</span><span class="o">();</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">intro</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">doc</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="s">"First line"</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="nd">@NoTitle</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">my_method</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">doc</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="s">"My content without title"</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">conclusion</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">doc</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="s">"Last line"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The file generated from the method with <code>NoTitle</code> annotation has no header.
+On the final rendering, it&#8217;s like it was part of the previous chapter.</p>
+</div>
+<div class="sect3 rendering">
+<h4 id="_rendering_of_the_result">Rendering of the result</h4>
+<div class="sect4">
+<h5 id="com_github_docastest_samples_mytestwithouttitleononetest">My test without title on one test</h5>
+<div class="sect5">
+<h6 id="com_github_docastest_samples_mytestwithouttitleononetest_intro">Intro</h6>
+<div class="paragraph">
+<p>First line</p>
+</div>
+<div class="paragraph">
+<p>My content without title</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="com_github_docastest_samples_mytestwithouttitleononetest_conclusion">Conclusion</h6>
+<div class="paragraph">
+<p>Last line</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_junitextension_approvalsextensiontest_using_a_custom_writer">Using a custom writer</h3>
+<div class="paragraph">
+<p>It&#8217;s possible to give a specific DocWriter to <code>ApprovalsExtension</code>
+and modify what it will be written in the final document.</p>
+</div>
+<div class="listingblock">
+<div class="title">Test example using <code>ApprovalsExtension</code></div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">class</span> <span class="nc">MyCustomWriterTest</span> <span class="o">{</span>
+
+    <span class="nd">@RegisterExtension</span>
+    <span class="kd">static</span> <span class="kd">final</span> <span class="nc">ApprovalsExtension</span> <span class="n">doc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ApprovalsExtension</span><span class="o">(</span>
+            <span class="k">new</span> <span class="nf">DocWriter</span><span class="o">()</span> <span class="o">{</span>
+                <span class="nd">@Override</span>
+                <span class="kd">public</span> <span class="kt">void</span> <span class="nf">write</span><span class="o">(</span><span class="nc">String</span><span class="o">...</span> <span class="n">texts</span><span class="o">)</span> <span class="o">{</span>
+                    <span class="kd">super</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">texts</span><span class="o">);</span>
+                    <span class="kd">super</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="s">" // Add a comment after each call to write"</span><span class="o">);</span>
+                <span class="o">}</span>
+
+                <span class="nd">@Override</span>
+                <span class="kd">public</span> <span class="nc">String</span> <span class="nf">formatOutput</span><span class="o">(</span><span class="nc">String</span> <span class="n">title</span><span class="o">,</span> <span class="nc">Method</span> <span class="n">testMethod</span><span class="o">)</span> <span class="o">{</span>
+
+                    <span class="k">return</span> <span class="s">"// Add an header to the document\n"</span>
+                            <span class="o">+</span> <span class="kd">super</span><span class="o">.</span><span class="na">formatOutput</span><span class="o">(</span><span class="n">title</span> <span class="o">+</span> <span class="s">": Custom title"</span><span class="o">,</span> <span class="n">testMethod</span><span class="o">);</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+    <span class="o">);</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">test_A</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">doc</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="s">"In my *test*"</span><span class="o">);</span>
+    <span class="o">}</span>
+
+<span class="o">}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When executing test method <code>test_A</code>, a file <code>_MyCustomWriterTest.test_A.approved.adoc</code> is generated and contains the following text</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>// Add an header to the document
+
+[#com_github_docastest_samples_mycustomwritertest_test_a]
+= Test A: Custom title
+
+In my *test* // Add a comment after each call to write</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_junitextension_approvalsextensiontest_using_a_custom_formatter">Using a custom formatter</h3>
+<div class="paragraph">
+<p>It&#8217;s possible to give a specific Formatter to <code>ApprovalsExtension</code>
+and change the rendering for some instructions or create another formatter.</p>
+</div>
+<div class="listingblock">
+<div class="title">Test example using <code>ApprovalsExtension</code></div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">class</span> <span class="nc">MyCustomFormatterTest</span> <span class="o">{</span>
+
+    <span class="nd">@RegisterExtension</span>
+    <span class="kd">static</span> <span class="kd">final</span> <span class="nc">ApprovalsExtension</span> <span class="n">doc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ApprovalsExtension</span><span class="o">(</span>
+            <span class="k">new</span> <span class="nf">DocWriter</span><span class="o">(</span>
+                    <span class="k">new</span> <span class="nf">AsciidocFormatter</span><span class="o">()</span> <span class="o">{</span>
+                        <span class="nd">@Override</span>
+                        <span class="c1">/// Add the word `Warning` before the message.</span>
+                        <span class="kd">public</span> <span class="nc">String</span> <span class="nf">warning</span><span class="o">(</span><span class="nc">String</span> <span class="n">message</span><span class="o">)</span> <span class="o">{</span>
+                            <span class="k">return</span> <span class="kd">super</span><span class="o">.</span><span class="na">warning</span><span class="o">(</span><span class="s">"Warning: "</span> <span class="o">+</span> <span class="n">message</span><span class="o">);</span>
+                        <span class="o">}</span>
+                    <span class="o">})</span>
+    <span class="o">);</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">test_A</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">doc</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">doc</span><span class="o">.</span><span class="na">getFormatter</span><span class="o">().</span><span class="na">warning</span><span class="o">(</span><span class="s">"My custom warning."</span><span class="o">));</span>
+    <span class="o">}</span>
+
+<span class="o">}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When executing test method <code>test_A</code>, a file <code>_MyCustomFormatterTest.test_A.approved.adoc</code> is generated and contains the following text</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>[#com_github_docastest_samples_mycustomformattertest_test_a]
+= Test A
+
+
+[WARNING]
+====
+Warning: My custom warning.
+====</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_junitextension_approvalsextensiontest_nested_class">Nested class</h3>
+<div class="paragraph">
+<p>Nested class can be used to organize tests.
+Each nested class create a nested title.</p>
+</div>
+<div class="listingblock">
+<div class="title">Test example using nested class</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="cm">/**
+ * Demo of a simple usage to generate documentation.
+ */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">DemoNestedTest</span> <span class="o">{</span>
+    <span class="nd">@RegisterExtension</span>
+    <span class="kd">static</span> <span class="kd">final</span> <span class="nc">ApprovalsExtension</span> <span class="n">writer</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SimpleApprovalsExtension</span><span class="o">();</span>
+
+    <span class="cm">/**
+     * Document of Addition operations.
+     */</span>
+    <span class="nd">@Nested</span>
+    <span class="kd">class</span> <span class="nc">Adding</span> <span class="o">{</span>
+
+        <span class="nd">@Test</span>
+        <span class="nd">@DisplayName</span><span class="o">(</span><span class="s">"Adding 2 simple numbers"</span><span class="o">)</span>
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">should_be_5_when_adding_2_and_3</span><span class="o">()</span> <span class="o">{</span>
+            <span class="n">writer</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"%d + %d = %d"</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span><span class="o">));</span>
+        <span class="o">}</span>
+
+        <span class="cm">/**
+         * A nested test.
+         */</span>
+        <span class="nd">@Test</span>
+        <span class="nd">@DisplayName</span><span class="o">(</span><span class="s">"Adding 3 simple numbers"</span><span class="o">)</span>
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">should_be_9_when_adding_2_3_and_4</span><span class="o">()</span> <span class="o">{</span>
+            <span class="n">writer</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"%d + %d + %d = %d"</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span><span class="o">));</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Nested</span>
+    <span class="kd">class</span> <span class="nc">Multiply</span> <span class="o">{</span>
+        <span class="nd">@Test</span>
+        <span class="nd">@DisplayName</span><span class="o">(</span><span class="s">"Multiply 2 simple numbers"</span><span class="o">)</span>
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">should_be_12_when_multiply_4_and_3</span><span class="o">()</span> <span class="o">{</span>
+            <span class="n">writer</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"%d * %d = %d"</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">3</span><span class="o">));</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Generated files in <code>com/github/docastest/doctesting/junitextension</code>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>_DemoNestedTest.Adding.should_be_5_when_adding_2_and_3.approved.adoc</p>
+</li>
+<li>
+<p>_DemoNestedTest.Adding.should_be_9_when_adding_2_3_and_4.approved.adoc</p>
+</li>
+<li>
+<p>_DemoNestedTest.Multiply.should_be_12_when_multiply_4_and_3.approved.adoc</p>
+</li>
+<li>
+<p>_DemoNestedTest.approved.adoc</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Document generated</div>
+<div class="content">
+<pre>[#com_github_docastest_doctesting_junitextension_demonestedtest]
+= Demo nested test
+
+Demo of a simple usage to generate documentation.
+
+[#com_github_docastest_doctesting_junitextension_demonestedtest_adding]
+== Adding
+
+Document of Addition operations.
+
+include::_DemoNestedTest.Adding.should_be_5_when_adding_2_and_3.approved.adoc[leveloffset=+2]
+
+include::_DemoNestedTest.Adding.should_be_9_when_adding_2_3_and_4.approved.adoc[leveloffset=+2]
+
+[#com_github_docastest_doctesting_junitextension_demonestedtest_multiply]
+== Multiply
+
+include::_DemoNestedTest.Multiply.should_be_12_when_multiply_4_and_3.approved.adoc[leveloffset=+2]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><em>Final rendering</em></p>
+</div>
+<div class="sect3 rendering">
+<h4 id="_rendering">Rendering</h4>
+<div class="sect4">
+<h5 id="com_github_docastest_doctesting_junitextension_demonestedtest">Demo nested test</h5>
+<div class="paragraph">
+<p>Demo of a simple usage to generate documentation.</p>
+</div>
+<div class="sect5">
+<h6 id="com_github_docastest_doctesting_junitextension_demonestedtest_adding">Adding</h6>
+<div class="paragraph">
+<p>Document of Addition operations.</p>
+</div>
+<div class="sect6">
+<h7 id="com_github_docastest_doctesting_junitextension_demonestedtest_adding_should_be_5_when_adding_2_and_3">Adding 2 simple numbers</h7>
+<div class="paragraph">
+<p>2 + 3 = 5</p>
+</div>
+</div>
+<div class="sect6">
+<h7 id="com_github_docastest_doctesting_junitextension_demonestedtest_adding_should_be_9_when_adding_2_3_and_4">Adding 3 simple numbers</h7>
+<div class="paragraph">
+<p>A nested test.</p>
+</div>
+<div class="paragraph">
+<p>2 + 3 + 4 = 9</p>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="com_github_docastest_doctesting_junitextension_demonestedtest_multiply">Multiply</h6>
+<div class="sect6">
+<h7 id="com_github_docastest_doctesting_junitextension_demonestedtest_multiply_should_be_12_when_multiply_4_and_3">Multiply 2 simple numbers</h7>
+<div class="paragraph">
+<p>4 * 3 = 12</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_junitextension_approvalsextensiontest_document_with_all_tests_in_a_testclass">Document with all tests in a testclass</h3>
+<div class="paragraph">
+<p>At the end of a test, a file is created including files generated on each test.</p>
+</div>
+<div class="paragraph">
+<p><code>ApprovalsExtension</code> must be static to be able to run <code>AfterAll</code> callback.</p>
+</div>
+<div class="listingblock">
+<div class="title">Test example used to generate class document</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">class</span> <span class="nc">MyTest</span> <span class="o">{</span>
+    <span class="nd">@RegisterExtension</span>
+    <span class="kd">static</span> <span class="kd">final</span> <span class="nc">ApprovalsExtension</span> <span class="n">doc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SimpleApprovalsExtension</span><span class="o">();</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">test_A</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">doc</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="s">"In my *test*"</span><span class="o">);</span>
+    <span class="o">}</span>
+
+<span class="o">}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Class <code>MyTest</code> is in package <code>com.github.docastest.samples</code>.</p>
+</div>
+<div class="listingblock">
+<div class="title">Document generated</div>
+<div class="content">
+<pre>ifndef::ROOT_PATH[:ROOT_PATH: ../../../..]
+
+[#com_github_docastest_samples_mytest]
+= My test
+
+include::_MyTest.test_A.approved.adoc[leveloffset=+1]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><em>Final rendering</em></p>
+</div>
+<div class="sect3 rendering">
+<h4 id="com_github_docastest_samples_mytest">My test</h4>
+<div class="sect4">
+<h5 id="com_github_docastest_samples_mytest_test_a">Test A</h5>
+<div class="paragraph">
+<p>In my <strong>test</strong></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_junitextension_approvalsextensiontest_failing_test_output">Failing test output</h3>
+<div class="paragraph">
+<p>When a test fails, the error is written in the final document.
+It&#8217;s help to understand and investigate on the problem.</p>
+</div>
+<div class="paragraph">
+<p>When the test fails, the reason (exception) is written into the generated document.</p>
+</div>
+<div class="listingblock">
+<div class="title">Test example used to generate class document</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">class</span> <span class="nc">FailingTest</span> <span class="o">{</span>
+    <span class="nd">@RegisterExtension</span>
+    <span class="kd">static</span> <span class="kd">final</span> <span class="nc">ApprovalsExtension</span> <span class="n">doc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SimpleApprovalsExtension</span><span class="o">();</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">failing_test</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">doc</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="s">"Some information before failure."</span><span class="o">,</span> <span class="s">""</span><span class="o">,</span> <span class="s">""</span><span class="o">);</span>
+        <span class="n">fail</span><span class="o">(</span><span class="s">"Problem on the test, it fails."</span><span class="o">);</span>
+        <span class="n">doc</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="s">"Information added after failure are not in the final document."</span><span class="o">,</span> <span class="s">""</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Document generated (exception stack trace is truncated)</div>
+<div class="content">
+<pre>ifndef::ROOT_PATH[:ROOT_PATH: ../../../..]
+
+[#com_github_docastest_samples_failingtest_failing_test]
+= Failing test
+
+Some information before failure.
+
+
+
+*Error generating documentation*
+----
+org.opentest4j.AssertionFailedError: Problem on the test, it fails.
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:134)
+	at com.github.docastest.samples.FailingTest.failing_test(FailingTest.java:23)
+	...
+
+----</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><em>Final rendering</em></p>
+</div>
+<div class="openblock rendering">
+<div class="content">
+<div id="com_github_docastest_samples_failingtest_failing_test" class="paragraph">
+<p><span class="title1">Failing test</span></p>
+</div>
+<div class="paragraph">
+<p>Some information before failure.</p>
+</div>
+<div class="paragraph">
+<p><strong>Error generating documentation</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>org.opentest4j.AssertionFailedError: Problem on the test, it fails.
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:134)
+	at com.github.docastest.samples.FailingTest.failing_test(FailingTest.java:23)
+	...</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>A received file is produced for the class containing the failing test.
+This file includes received files if they exist.
+It is thus possible to visualize the received file in the file with other methods.</p>
+</div>
+<div class="listingblock">
+<div class="title">Document generated</div>
+<div class="content">
+<pre>ifndef::ROOT_PATH[:ROOT_PATH: ../../../..]
+
+[#com_github_docastest_samples_failingtest]
+= Failing test
+
+include::_FailingTest.failing_test.received.adoc[leveloffset=+1]</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="com_github_docastest_doctesting_junitextension_failurereportertest">Failure report</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_junitextension_failurereportertest_report_when_files_are_differents">Report when files are differents</h3>
+<div class="paragraph">
+<p>When the received file is not the same as the approved file,
+first different line is displayed on report.</p>
+</div>
+<div class="literalblock">
+<div class="title">Received text</div>
+<div class="content">
+<pre>= Title
+Description
+Line from received text
+Footer received</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="title">Approved text</div>
+<div class="content">
+<pre>= Title
+Description
+Line from approved text
+Footer approved</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="title">Report</div>
+<div class="content">
+<pre>Differences between files:
+    Approved: [TEMPORARY FOLDER]/files/approved.adoc
+    Received: [TEMPORARY FOLDER]/files/received.adoc
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+3: Line from approved text
+=================================================================
+3: Line from received text
+&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_junitextension_failurereportertest_report_when_files_are_identicals">Report when files are identicals</h3>
+<div class="paragraph">
+<p>When the received file is identical to the approved file,
+it&#8217;s indicated it.
+But this report is normally not displayed when files are identical.</p>
+</div>
+<div class="literalblock">
+<div class="title">Received text</div>
+<div class="content">
+<pre>= Title
+Description</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="title">Approved text</div>
+<div class="content">
+<pre>= Title
+Description</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="title">Report</div>
+<div class="content">
+<pre>Files are identical:
+    Approved: [TEMPORARY FOLDER]/files/approved.adoc
+    Received: [TEMPORARY FOLDER]/files/received.adoc</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_junitextension_failurereportertest_received_file_shorter_than_approved_file">Received file shorter than approved file</h3>
+<div class="paragraph">
+<p>When the received file is shorter than the approved file,
+We indicate that there is no more lines.</p>
+</div>
+<div class="literalblock">
+<div class="title">Received text</div>
+<div class="content">
+<pre>= Title
+Description</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="title">Approved text</div>
+<div class="content">
+<pre>= Title
+Description
+Footer</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="title">Report</div>
+<div class="content">
+<pre>Differences between files:
+    Approved: [TEMPORARY FOLDER]/files/approved.adoc
+    Received: [TEMPORARY FOLDER]/files/received.adoc
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+3: Footer
+=================================================================
+3 (no line)
+&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_junitextension_failurereportertest_received_file_longer_than_approved_file">Received file longer than approved file</h3>
+<div class="paragraph">
+<p>When the received file is longer than the approved file,
+We indicate that there is no more lines.</p>
+</div>
+<div class="literalblock">
+<div class="title">Received text</div>
+<div class="content">
+<pre>= Title
+Description
+Footer</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="title">Approved text</div>
+<div class="content">
+<pre>= Title
+Description</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="title">Report</div>
+<div class="content">
+<pre>Differences between files:
+    Approved: [TEMPORARY FOLDER]/files/approved.adoc
+    Received: [TEMPORARY FOLDER]/files/received.adoc
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+3 (no line)
+=================================================================
+3: Footer
+&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_junitextension_failurereportertest_approved_file_does_not_exist">Approved file does not exist</h3>
+<div class="paragraph">
+<p>We indicate a specific message when approved file does not exist.</p>
+</div>
+<div class="literalblock">
+<div class="title">Received text</div>
+<div class="content">
+<pre>= Title
+Description
+Footer</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="title">Report</div>
+<div class="content">
+<pre>No approved file yet</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="com_github_docastest_doctesting_utils_classesordertest">Classes order</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_utils_classesordertest_in_order">In order</h3>
+<div class="paragraph">
+<p>We retrieve names of methods and nested classes in the same order they appear in source file.</p>
+</div>
+<div class="listingblock">
+<div class="title">Get declared methods and classes in order</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="nc">Class</span><span class="o">&lt;?&gt;</span> <span class="n">testClass</span> <span class="o">=</span> <span class="nc">MyClass</span><span class="o">.</span><span class="na">class</span><span class="o">;</span>
+<span class="nc">Stream</span><span class="o">&lt;</span><span class="nc">ClassesOrder</span><span class="o">.</span><span class="na">EncapsulateDeclared</span><span class="o">&gt;</span> <span class="n">declaredInOrder</span>
+        <span class="o">=</span> <span class="k">new</span> <span class="nc">ClassesOrder</span><span class="o">().</span><span class="na">getDeclaredInOrder</span><span class="o">(</span><span class="n">testClass</span><span class="o">);</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Only methods and classes directly under the class passed in parameter are returned.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>method_1</p>
+</li>
+<li>
+<p>MySubClassA</p>
+</li>
+<li>
+<p>method_2</p>
+</li>
+<li>
+<p>MySubClassB</p>
+</li>
+<li>
+<p>method_3</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Test example using</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">class</span> <span class="nc">MyClass</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">method_1</span><span class="o">()</span> <span class="o">{</span>
+    <span class="o">}</span>
+
+    <span class="kd">class</span> <span class="nc">MySubClassA</span> <span class="o">{</span>
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">method_A_1</span><span class="o">()</span> <span class="o">{</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">method_2</span><span class="o">()</span> <span class="o">{</span>
+    <span class="o">}</span>
+
+    <span class="kd">class</span> <span class="nc">MySubClassB</span> <span class="o">{</span>
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">method_B_1</span><span class="o">()</span> <span class="o">{</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">method_3</span><span class="o">()</span> <span class="o">{</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_utils_classesordertest_filter_methods_and_classes">Filter methods and classes</h3>
+<div class="paragraph">
+<p>We can give filters to select methods and classes to return.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>method_1</p>
+</li>
+<li>
+<p>MySubClassB</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Test example using</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">class</span> <span class="nc">MyClass</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">method_1</span><span class="o">()</span> <span class="o">{</span>
+    <span class="o">}</span>
+
+    <span class="kd">class</span> <span class="nc">MySubClassA</span> <span class="o">{</span>
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">method_A_1</span><span class="o">()</span> <span class="o">{</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">method_2</span><span class="o">()</span> <span class="o">{</span>
+    <span class="o">}</span>
+
+    <span class="kd">class</span> <span class="nc">MySubClassB</span> <span class="o">{</span>
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">method_B_1</span><span class="o">()</span> <span class="o">{</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">method_3</span><span class="o">()</span> <span class="o">{</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_utils_classesordertest_nested_class_using_outer_method">Nested class using outer method</h3>
+<div class="paragraph">
+<p>A nested class calling an outer method generate some special method that are not in source.
+Those methods should not be in sorted method list</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>methodOfClassAtFirstLevel</p>
+</li>
+<li>
+<p>MySubClassA</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Test example using</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">static</span> <span class="kd">class</span> <span class="nc">MyClassWithOnlySubClassExterne</span> <span class="o">{</span>
+
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">methodOfClassAtFirstLevel</span><span class="o">()</span> <span class="o">{</span>
+    <span class="o">}</span>
+
+    <span class="kd">class</span> <span class="nc">MySubClassA</span> <span class="o">{</span>
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">method_A_1</span><span class="o">()</span> <span class="o">{</span>
+            <span class="n">methodOfClassAtFirstLevel</span><span class="o">();</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="com_github_docastest_doctesting_utils_configtest">Configuration</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_utils_configtest_available_properties">Available properties</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>SOURCE_PATH: Path of source code.</p>
+</li>
+<li>
+<p>TEST_PATH: Path of test code.</p>
+</li>
+<li>
+<p>DOC_PATH: Path where documentation is generated.</p>
+</li>
+<li>
+<p>RESOURCE_PATH: Path of resources.</p>
+</li>
+<li>
+<p>FORMATTER: Full qualified name of the formatter class.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_utils_configtest_default_values">Default values</h3>
+<div class="paragraph">
+<p>By default, values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Key</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SOURCE_PATH</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src/main/java</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TEST_PATH</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src/test/java</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DOC_PATH</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src/test/docs</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RESOURCE_PATH</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src/test/resources</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FORMATTER</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Formatter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">com.github.docastest.docformatter.asciidoc.AsciidocFormatter</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_utils_configtest_load_path_from_config_file">Configuration file</h3>
+<div class="paragraph">
+<p>You can change those folders by creating a properties file named <code>docAsTest.properties</code> and put it in a resource folder.</p>
+</div>
+<div class="paragraph">
+<p>When this file contains:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>SOURCE_PATH:source/java
+TEST_PATH:source/test
+DOC_PATH:source/docs
+FORMATTER:com.github.docastest.samples.MyFormatter</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Values are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Key</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SOURCE_PATH</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">source/java</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TEST_PATH</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">source/test</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DOC_PATH</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">source/docs</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RESOURCE_PATH</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src/test/resources</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FORMATTER</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Formatter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">com.github.docastest.samples.MyFormatter</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>When config file does not exist, values are the default ones.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="com_github_docastest_doctesting_utils_docpathtest">Document path</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>One of the essential points to create a documentation, is links between files.
+It&#8217;s even more important with documentation as test.
+For a java method, there is the java file, the approved and received files, and the html file.
+We need to easily create paths to those files.
+We also need to reference one file from another one either to include it or to make a link to another page.</p>
+</div>
+<div class="paragraph">
+<p>This class helps to navigate between all that files.</p>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_utils_docpathtest_available_paths_from_docpath">Available paths from DocPath</h3>
+<div class="paragraph">
+<p><code>DocPath</code> contains the information defining the location of the item to be documented.
+It&#8217;s not a real path but just the location in the tree of documents.
+From this class, we can generate the real paths to the different kinds of associated documents.</p>
+</div>
+<div class="paragraph">
+<p>We can create a <code>DocPath</code> the code below (where <code>MyTest</code> is declared in package <code>com.github.docastest.samples</code>).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="nc">Class</span><span class="o">&lt;?&gt;</span> <span class="n">clazz</span> <span class="o">=</span> <span class="nc">MyTest</span><span class="o">.</span><span class="na">class</span><span class="o">;</span>
+<span class="kd">final</span> <span class="nc">DocPath</span> <span class="n">docPath</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DocPath</span><span class="o">(</span><span class="n">clazz</span><span class="o">);</span></code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Kind of document</th>
+<th class="tableblock halign-left valign-top">Method called onePath.path()</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>page()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src/test/docs/com/github/docastest/samples/MyTest.adoc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">File to create a page in documentation.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>approved()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src/test/docs/com/github/docastest/samples/_MyTest.approved.adoc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The approved file.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>received()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src/test/docs/com/github/docastest/samples/_MyTest.received.adoc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The received file.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>test()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src/test/java/com/github/docastest/samples/MyTest.java</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The java source file.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>html()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">com/github/docastest/samples/MyTest.html</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The final rendered file.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_utils_docpathtest_path_by_type">Path by type</h3>
+<div class="paragraph">
+<p>DocPath is created with this code:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code>final DocPath docPath = new DocPath(MyTest.class);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that <code>MyTest</code> class is declared in package <code>com.github.docastest.samples</code>.</p>
+</div>
+<div class="paragraph">
+<p>We also used <code>com.github.docastest.doctesting.utils.DocPathTest</code> class to display <code>from</code> and <code>to</code> results with approved file (<code>src/test/docs/com/github/docastest/doctesting/utils/_DocPathTest.approved.adoc</code>).</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Method</th>
+<th class="tableblock halign-left valign-top">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name()</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MyTest</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Method</th>
+<th class="tableblock halign-left valign-top">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="5"><div class="content"><div class="paragraph">
+<p><code>page()</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">path()</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src/test/docs/com/github/docastest/samples/MyTest.adoc</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>folder()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src/test/docs/com/github/docastest/samples</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>filename()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MyTest.adoc</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>from()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">../../samples/MyTest.adoc</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>to()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">../doctesting/utils/_DocPathTest.approved.adoc</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="5"><div class="content"><div class="paragraph">
+<p><code>approved()</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">path()</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src/test/docs/com/github/docastest/samples/_MyTest.approved.adoc</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>folder()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src/test/docs/com/github/docastest/samples</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>filename()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">_MyTest.approved.adoc</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>from()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">../../samples/_MyTest.approved.adoc</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>to()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">../doctesting/utils/_DocPathTest.approved.adoc</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="5"><div class="content"><div class="paragraph">
+<p><code>received()</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">path()</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src/test/docs/com/github/docastest/samples/_MyTest.received.adoc</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>folder()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src/test/docs/com/github/docastest/samples</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>filename()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">_MyTest.received.adoc</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>from()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">../../samples/_MyTest.received.adoc</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>to()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">../doctesting/utils/_DocPathTest.approved.adoc</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="5"><div class="content"><div class="paragraph">
+<p><code>test()</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">path()</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src/test/java/com/github/docastest/samples/MyTest.java</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>folder()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src/test/java/com/github/docastest/samples</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>filename()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MyTest.java</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>from()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">../../../../../../java/com/github/docastest/samples/MyTest.java</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>to()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">../../../../../docs/com/github/docastest/doctesting/utils/_DocPathTest.approved.adoc</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="5"><div class="content"><div class="paragraph">
+<p><code>resource()</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">path()</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src/test/resources/com/github/docastest/samples/MyTest.adoc</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>folder()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src/test/resources/com/github/docastest/samples</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>filename()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MyTest.adoc</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>from()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">../../../../../../resources/com/github/docastest/samples/MyTest.adoc</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>to()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">../../../../../docs/com/github/docastest/doctesting/utils/_DocPathTest.approved.adoc</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="5"><div class="content"><div class="paragraph">
+<p><code>html()</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">path()</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">com/github/docastest/samples/MyTest.html</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>folder()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">com/github/docastest/samples</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>filename()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MyTest.html</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>from()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">../../../../../../../../com/github/docastest/samples/MyTest.html</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>to()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">../../../../src/test/docs/com/github/docastest/doctesting/utils/_DocPathTest.approved.adoc</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_utils_docpathtest_path_by_type_with_method">Path by type with method</h3>
+<div class="paragraph">
+<p>DocPath is created with this code:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code>final DocPath docPath = new DocPath(MethodReference.getMethod(MyTest::test_A));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that <code>MyTest</code> class is declared in package <code>com.github.docastest.samples</code>.</p>
+</div>
+<div class="paragraph">
+<p>We also used <code>com.github.docastest.doctesting.utils.DocPathTest</code> class to display <code>from</code> and <code>to</code> results with approved file (<code>src/test/docs/com/github/docastest/doctesting/utils/_DocPathTest.approved.adoc</code>).</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Method</th>
+<th class="tableblock halign-left valign-top">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name()</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MyTest.test_A</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Method</th>
+<th class="tableblock halign-left valign-top">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="5"><div class="content"><div class="paragraph">
+<p><code>page()</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">path()</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src/test/docs/com/github/docastest/samples/MyTest.test_A.adoc</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>folder()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src/test/docs/com/github/docastest/samples</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>filename()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MyTest.test_A.adoc</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>from()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">../../samples/MyTest.test_A.adoc</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>to()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">../doctesting/utils/_DocPathTest.approved.adoc</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="5"><div class="content"><div class="paragraph">
+<p><code>approved()</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">path()</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src/test/docs/com/github/docastest/samples/_MyTest.test_A.approved.adoc</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>folder()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src/test/docs/com/github/docastest/samples</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>filename()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">_MyTest.test_A.approved.adoc</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>from()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">../../samples/_MyTest.test_A.approved.adoc</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>to()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">../doctesting/utils/_DocPathTest.approved.adoc</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="5"><div class="content"><div class="paragraph">
+<p><code>received()</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">path()</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src/test/docs/com/github/docastest/samples/_MyTest.test_A.received.adoc</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>folder()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src/test/docs/com/github/docastest/samples</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>filename()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">_MyTest.test_A.received.adoc</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>from()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">../../samples/_MyTest.test_A.received.adoc</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>to()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">../doctesting/utils/_DocPathTest.approved.adoc</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="5"><div class="content"><div class="paragraph">
+<p><code>test()</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">path()</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src/test/java/com/github/docastest/samples/MyTest.test_A.java</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>folder()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">src/test/java/com/github/docastest/samples</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>filename()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MyTest.test_A.java</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>from()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">../../../../../../java/com/github/docastest/samples/MyTest.test_A.java</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>to()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">../../../../../docs/com/github/docastest/doctesting/utils/_DocPathTest.approved.adoc</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="5"><div class="content"><div class="paragraph">
+<p><code>html()</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">path()</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">com/github/docastest/samples/MyTest.test_A.html</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>folder()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">com/github/docastest/samples</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>filename()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MyTest.test_A.html</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>from()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">../../../../../../../../com/github/docastest/samples/MyTest.test_A.html</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>to()</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">../../../../src/test/docs/com/github/docastest/doctesting/utils/_DocPathTest.approved.adoc</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_utils_docpathtest_nested_class">Nested class</h3>
+<div class="paragraph">
+<p>Name for nested class <code>com.github.docastest.doctesting.sample.MyClass$MySubClass</code> is <code>MyClass.MySubClass</code>.</p>
+</div>
+<div class="paragraph">
+<p>Name for method <code>doSomething</code> in nested class <code>com.github.docastest.doctesting.sample.MyClass$MySubClass</code> is <code>MyClass.MySubClass.doSomething</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_utils_docpathtest_make_path_independent_of_operating_system">Make path independent of operating system</h3>
+<div class="paragraph">
+<p>Path in asciidoc files must used '/' independently of operating system and file separator.</p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s important to always generate the same reference file (.adoc) because we compare it with the last generated one.
+Otherwise, the test could fail when executed on another operating system.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="nc">Path</span> <span class="n">path</span> <span class="o">=</span> <span class="nc">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"src"</span><span class="o">,</span> <span class="s">"main"</span><span class="o">,</span> <span class="s">"java"</span><span class="o">);</span>
+<span class="nc">String</span> <span class="n">asciiDocPath</span> <span class="o">=</span> <span class="nc">DocPath</span><span class="o">.</span><span class="na">toAsciiDoc</span><span class="o">(</span><span class="n">path</span><span class="o">);</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>asciiDocPath = src/main/java</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_utils_docpathtest_build_a_path">Build a path</h3>
+<div class="paragraph">
+<p>You can create a DocPath using one of the constructor available.</p>
+</div>
+<div class="paragraph">
+<p>With one of this code:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="k">new</span> <span class="nc">DocPath</span><span class="o">(</span><span class="nc">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">""</span><span class="o">),</span> <span class="s">"DocPathTest"</span><span class="o">)</span></code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="k">new</span> <span class="nc">DocPath</span><span class="o">(</span><span class="s">"DocPathTest"</span><span class="o">)</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Approved file is:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="n">src</span><span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">_DocPathTest</span><span class="o">.</span><span class="na">approved</span><span class="o">.</span><span class="na">adoc</span></code></pre>
+</div>
+</div>
+<hr>
+<div class="paragraph">
+<p>With one of this code:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="k">new</span> <span class="nc">DocPath</span><span class="o">(</span><span class="nc">DocPathTest</span><span class="o">.</span><span class="na">class</span><span class="o">)</span></code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="k">new</span> <span class="nc">DocPath</span><span class="o">(</span><span class="nc">DocPathTest</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getPackage</span><span class="o">(),</span> <span class="s">"DocPathTest"</span><span class="o">)</span></code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="k">new</span> <span class="nc">DocPath</span><span class="o">(</span><span class="nc">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"com"</span><span class="o">,</span> <span class="s">"github"</span><span class="o">,</span> <span class="s">"docastest"</span><span class="o">,</span> <span class="s">"doctesting"</span><span class="o">,</span> <span class="s">"utils"</span><span class="o">),</span> <span class="s">"DocPathTest"</span><span class="o">)</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Approved file is:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="n">src</span><span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">com</span><span class="o">/</span><span class="n">github</span><span class="o">/</span><span class="n">docastest</span><span class="o">/</span><span class="n">doctesting</span><span class="o">/</span><span class="n">utils</span><span class="o">/</span><span class="n">_DocPathTest</span><span class="o">.</span><span class="na">approved</span><span class="o">.</span><span class="na">adoc</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="com_github_docastest_doctesting_utils_docwritertest">DocWriter</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_utils_docwritertest_doc_writer_usage">Usage</h3>
+<div class="paragraph">
+<p>DocWriter is just a buffer.
+Everything wrote in DocWriter will be returned when asking for output.
+The output is composed with a title, the comment of the method (without params).
+An id is also added above the title to be able to apply a specific style in the chapter if needed.</p>
+</div>
+<div class="listingblock">
+<div class="title">Method used</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">public</span> <span class="kt">void</span> <span class="nf">simple_method</span><span class="o">()</span> <span class="o">{</span>
+
+<span class="o">}</span></code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">DocWriter usage</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">final</span> <span class="nc">DocWriter</span> <span class="n">doc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DocWriter</span><span class="o">();</span>
+<span class="n">doc</span><span class="o">.</span><span class="na">write</span><span class="o">(</span>
+        <span class="s">"Some text added to show DocWriter output."</span><span class="o">,</span>
+        <span class="s">"Multiple lines can be added."</span>
+<span class="o">);</span>
+
+<span class="kd">final</span> <span class="nc">String</span> <span class="n">output</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="na">formatOutput</span><span class="o">(</span>
+        <span class="s">"My title"</span><span class="o">,</span>
+        <span class="n">getClass</span><span class="o">().</span><span class="na">getMethod</span><span class="o">(</span><span class="s">"simple_method"</span><span class="o">)</span>
+<span class="o">);</span></code></pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="title">Output provided</div>
+<div class="content">
+<pre>[#com_github_docastest_doctesting_utils_docwritertest_simple_method]
+= My title
+
+Some text added to show DocWriter output.
+Multiple lines can be added.</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_utils_docwritertest_doc_writer_with_a_class">Output with a class</h3>
+<div class="paragraph">
+<p>DocWriter is also used to format output of a test class.
+In that case, we add a title and include all test files of the class.
+What is written on DocWriter is not used in this case.</p>
+</div>
+<div class="listingblock">
+<div class="title">Class used</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyTestWithTests</span> <span class="o">{</span>
+    <span class="nd">@RegisterExtension</span>
+    <span class="kd">static</span> <span class="kd">final</span> <span class="nc">ApprovalsExtension</span> <span class="n">doc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SimpleApprovalsExtension</span><span class="o">();</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">test_A</span><span class="o">()</span> <span class="o">{</span>
+    <span class="o">}</span>
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">test_B</span><span class="o">()</span> <span class="o">{</span>
+    <span class="o">}</span>
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">test_C</span><span class="o">()</span> <span class="o">{</span>
+    <span class="o">}</span>
+
+<span class="o">}</span></code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">DocWriter usage</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">final</span> <span class="nc">DocWriter</span> <span class="n">doc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DocWriter</span><span class="o">();</span>
+
+<span class="kd">final</span> <span class="nc">Class</span><span class="o">&lt;?&gt;</span> <span class="n">clazz</span> <span class="o">=</span> <span class="nc">MyTestWithTests</span><span class="o">.</span><span class="na">class</span><span class="o">;</span>
+<span class="kd">final</span> <span class="nc">String</span> <span class="n">output</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="na">formatOutput</span><span class="o">(</span><span class="n">clazz</span><span class="o">);</span></code></pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="title">Output provided</div>
+<div class="content">
+<pre>[#com_github_docastest_samples_mytestwithtests]
+= My test with tests
+
+include::_MyTestWithTests.test_A.approved.adoc[leveloffset=+1]
+
+include::_MyTestWithTests.test_B.approved.adoc[leveloffset=+1]
+
+include::_MyTestWithTests.test_C.approved.adoc[leveloffset=+1]</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_utils_docwritertest_doc_writer_without_title">Hide title</h3>
+<div class="paragraph">
+<p>If you don&#8217;t want the default title in the generated file, add @NoTitle annotation.
+It can be useful when you want to include this file in another test
+that have its own title for example.</p>
+</div>
+<div class="listingblock">
+<div class="title">Test with NoTitle annotation</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyTestWithoutTitle</span> <span class="o">{</span>
+    <span class="nd">@Test</span>
+    <span class="nd">@NoTitle</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">my_method</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// my doc generation</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">DocWriter usage</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">final</span> <span class="nc">DocWriter</span> <span class="n">doc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DocWriter</span><span class="o">();</span>
+<span class="nc">String</span> <span class="n">output</span> <span class="o">=</span> <span class="nc">String</span><span class="o">.</span><span class="na">join</span><span class="o">(</span><span class="s">"\n"</span><span class="o">,</span>
+        <span class="s">"Some text added to show DocWriter output."</span><span class="o">,</span>
+        <span class="n">doc</span><span class="o">.</span><span class="na">formatOutput</span><span class="o">(</span>
+                <span class="s">"This title will not be displayed"</span><span class="o">,</span>
+                <span class="nc">MyTestWithoutTitle</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getMethod</span><span class="o">(</span><span class="s">"my_method"</span><span class="o">)),</span>
+        <span class="s">"Some text added at the end."</span>
+<span class="o">);</span></code></pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="title">Output provided</div>
+<div class="content">
+<pre>Some text added to show DocWriter output.
+
+
+
+
+Some text added at the end.</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_utils_docwritertest_format_title">Format title</h3>
+<div class="paragraph">
+<p>When a title is specified, it is used as title.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="nc">Method</span> <span class="n">testMethod</span> <span class="o">=</span> <span class="nc">DocWriterTest</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getMethod</span><span class="o">(</span><span class="s">"format_title"</span><span class="o">);</span>
+<span class="kd">final</span> <span class="nc">String</span> <span class="n">output</span> <span class="o">=</span> <span class="n">docWriter</span><span class="o">.</span><span class="na">formatOutput</span><span class="o">(</span><span class="s">"My title"</span><span class="o">,</span> <span class="n">testMethod</span><span class="o">);</span></code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>[#com_github_docastest_doctesting_utils_docwritertest_format_title]
+= My title</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When a title is not specified, title comes from the method name or the class name after some formatting
+ (remove '_', uppercase first letter).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="nc">Method</span> <span class="n">testMethod</span> <span class="o">=</span> <span class="nc">DocWriterTest</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getMethod</span><span class="o">(</span><span class="s">"format_title"</span><span class="o">);</span>
+<span class="kd">final</span> <span class="nc">String</span> <span class="n">method_output</span> <span class="o">=</span> <span class="n">docWriter</span><span class="o">.</span><span class="na">formatOutput</span><span class="o">(</span><span class="n">testMethod</span><span class="o">);</span>
+
+<span class="kd">final</span> <span class="nc">String</span> <span class="n">class_output</span> <span class="o">=</span> <span class="n">docWriter</span><span class="o">.</span><span class="na">formatOutput</span><span class="o">(</span><span class="nc">MyTest</span><span class="o">.</span><span class="na">class</span><span class="o">);</span></code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Format title from method name</div>
+<div class="content">
+<pre>[#com_github_docastest_doctesting_utils_docwritertest_format_title]
+= Format title</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Format title from class name</div>
+<div class="content">
+<pre>[#com_github_docastest_samples_mytest]
+= My test
+
+include::_MyTest.test_A.approved.adoc[leveloffset=+1]</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_utils_docwritertest_add_description_using_comment">Add a description</h3>
+<div class="paragraph">
+<p>A description can be added after the title using the Javadoc.
+It can be done with the method javadoc or the class javadoc.</p>
+</div>
+<div class="listingblock">
+<div class="title">Class used</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="cm">/**
+ * My comment for MyTestComment
+ */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyTestWithComment</span> <span class="o">{</span>
+    <span class="nd">@RegisterExtension</span>
+    <span class="kd">static</span> <span class="kd">final</span> <span class="nc">ApprovalsExtension</span> <span class="n">doc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SimpleApprovalsExtension</span><span class="o">();</span>
+
+    <span class="cm">/**
+     * To describe a method, you can add a comment.
+     * It will be added under title.
+     */</span>
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">test_A</span><span class="o">()</span> <span class="o">{</span>
+    <span class="o">}</span>
+
+<span class="o">}</span></code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">DocWriter usage</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">final</span> <span class="nc">DocWriter</span> <span class="n">writer</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DocWriter</span><span class="o">();</span>
+
+<span class="kd">final</span> <span class="nc">String</span> <span class="n">method_output</span> <span class="o">=</span> <span class="n">writer</span><span class="o">.</span><span class="na">formatOutput</span><span class="o">(</span>
+        <span class="s">"My title"</span><span class="o">,</span>
+        <span class="nc">MyTestWithComment</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getMethod</span><span class="o">(</span><span class="s">"test_A"</span><span class="o">)</span>
+<span class="o">);</span>
+
+<span class="kd">final</span> <span class="nc">String</span> <span class="n">class_output</span> <span class="o">=</span> <span class="n">writer</span><span class="o">.</span><span class="na">formatOutput</span><span class="o">(</span><span class="nc">MyTestWithComment</span><span class="o">.</span><span class="na">class</span><span class="o">);</span></code></pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="title">Output provided with method</div>
+<div class="content">
+<pre>[#com_github_docastest_samples_mytestwithcomment_test_a]
+= My title
+
+To describe a method, you can add a comment.
+It will be added under title.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="title">Output provided with class</div>
+<div class="content">
+<pre>[#com_github_docastest_samples_mytestwithcomment]
+= My test with comment
+
+My comment for MyTestComment
+
+include::_MyTestWithComment.test_A.approved.adoc[leveloffset=+1]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If we want to add description of an other class (class under test for example),
+we can use <code>ClassToDocument</code> to define the class containing the description we want.
+It can be combine with the description on the test class.</p>
+</div>
+<div class="listingblock">
+<div class="title">Test class used</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="cm">/**
+ * Description of the test class.
+ */</span>
+<span class="nd">@ClassToDocument</span><span class="o">(</span><span class="n">clazz</span> <span class="o">=</span> <span class="nc">ClassUnderTest</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyTestWithClassToDocument</span> <span class="o">{</span>
+    <span class="nd">@RegisterExtension</span>
+    <span class="kd">static</span> <span class="kd">final</span> <span class="nc">ApprovalsExtension</span> <span class="n">doc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SimpleApprovalsExtension</span><span class="o">();</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">test_A</span><span class="o">()</span> <span class="o">{</span>
+    <span class="o">}</span>
+
+<span class="o">}</span></code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Class under test with description</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="cm">/**
+ * Description of the class ClassUnderTest.
+ */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ClassUnderTest</span> <span class="o">{</span>
+<span class="o">}</span></code></pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="title">Output provided</div>
+<div class="content">
+<pre>[#com_github_docastest_samples_mytestwithclasstodocument]
+= My test with class to document
+
+Description of the class ClassUnderTest.
+
+Description of the test class.
+
+include::_MyTestWithClassToDocument.test_A.approved.adoc[leveloffset=+1]</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_utils_docwritertest_customize_description">Customize description</h3>
+<div class="paragraph">
+<p>If you want to modify the comment before adding it to the document,
+you can extend the DocWriter.</p>
+</div>
+<div class="listingblock">
+<div class="title">Class used</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="cm">/**
+ * My comment for MyTestComment
+ */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyTestWithComment</span> <span class="o">{</span>
+    <span class="nd">@RegisterExtension</span>
+    <span class="kd">static</span> <span class="kd">final</span> <span class="nc">ApprovalsExtension</span> <span class="n">doc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SimpleApprovalsExtension</span><span class="o">();</span>
+
+    <span class="cm">/**
+     * To describe a method, you can add a comment.
+     * It will be added under title.
+     */</span>
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">test_A</span><span class="o">()</span> <span class="o">{</span>
+    <span class="o">}</span>
+
+<span class="o">}</span></code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">DocWriter usage</div>
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">final</span> <span class="nc">DocWriter</span> <span class="n">writer</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DocWriter</span><span class="o">()</span> <span class="o">{</span>
+    <span class="cm">/**
+     * Override getComment to upper case the comment.
+     */</span>
+    <span class="nd">@Override</span>
+    <span class="kd">protected</span> <span class="nc">Optional</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="nf">getComment</span><span class="o">(</span><span class="nc">Class</span> <span class="n">classFile</span><span class="o">,</span> <span class="nc">Method</span> <span class="n">testMethod</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="o">((</span><span class="nc">Optional</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;)</span> <span class="kd">super</span><span class="o">.</span><span class="na">getComment</span><span class="o">(</span><span class="n">classFile</span><span class="o">,</span> <span class="n">testMethod</span><span class="o">))</span>
+                <span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="n">c</span> <span class="o">-&gt;</span> <span class="n">c</span><span class="o">.</span><span class="na">toUpperCase</span><span class="o">());</span>
+    <span class="o">}</span>
+
+<span class="o">};</span>
+
+<span class="kd">final</span> <span class="nc">String</span> <span class="n">method_output</span> <span class="o">=</span> <span class="n">writer</span><span class="o">.</span><span class="na">formatOutput</span><span class="o">(</span>
+        <span class="s">"My title"</span><span class="o">,</span>
+        <span class="nc">MyTestWithComment</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getMethod</span><span class="o">(</span><span class="s">"test_A"</span><span class="o">)</span>
+<span class="o">);</span>
+
+<span class="kd">final</span> <span class="nc">String</span> <span class="n">class_output</span> <span class="o">=</span> <span class="n">writer</span><span class="o">.</span><span class="na">formatOutput</span><span class="o">(</span><span class="nc">MyTestWithComment</span><span class="o">.</span><span class="na">class</span><span class="o">);</span></code></pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="title">Output provided with method</div>
+<div class="content">
+<pre>[#com_github_docastest_samples_mytestwithcomment_test_a]
+= My title
+
+TO DESCRIBE A METHOD, YOU CAN ADD A COMMENT.
+IT WILL BE ADDED UNDER TITLE.</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="com_github_docastest_doctesting_utils_printertest">Printer</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_utils_printertest_list_of_codes_and_values_they_provided">List of codes and values they provided</h3>
+<div class="paragraph">
+<p>We can use the following code to get values and the code used to obtain it</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">final</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">CodeAndResult</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Printer</span><span class="o">().</span><span class="na">getCodeAndResult</span><span class="o">(</span>
+        <span class="mi">5</span> <span class="o">+</span> <span class="mi">3</span><span class="o">,</span>
+        <span class="mi">4</span> <span class="o">+</span> <span class="mi">2</span>
+<span class="o">);</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Result is</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">getCode()</th>
+<th class="tableblock halign-left valign-top">getValue()</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5 + 3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4 + 2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_utils_printertest_show_result_with_code">Show result with code</h3>
+<div class="paragraph">
+<p>We can use the following code to get values and the code used to obtain it.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">final</span> <span class="nc">String</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Printer</span><span class="o">().</span><span class="na">showResult</span><span class="o">(</span>
+        <span class="s">"abcd"</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">2</span><span class="o">),</span>
+        <span class="s">"abcd"</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">4</span><span class="o">)</span>
+<span class="o">);</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Result is</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>"abcd".substring(2) = cd</p>
+</li>
+<li>
+<p>"abcd".substring(2, 4) = cd</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>We can use it with any type returned by code.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">final</span> <span class="nc">String</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Printer</span><span class="o">().</span><span class="na">showResult</span><span class="o">(</span>
+        <span class="mi">3</span> <span class="o">+</span> <span class="mi">6</span><span class="o">,</span>
+        <span class="mi">5</span> <span class="o">+</span> <span class="mi">4</span>
+<span class="o">);</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Result is</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>3 + 6 = 9</p>
+</li>
+<li>
+<p>5 + 4 = 9</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Null values are displayed with <code>null</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="nc">String</span> <span class="n">value</span> <span class="o">=</span> <span class="s">"abcdef"</span><span class="o">;</span>
+<span class="nc">String</span> <span class="n">nullValue</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+<span class="kd">final</span> <span class="nc">String</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Printer</span><span class="o">().</span><span class="na">showResult</span><span class="o">(</span>
+        <span class="n">value</span><span class="o">,</span>
+        <span class="n">nullValue</span>
+<span class="o">);</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Result is</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>value = abcdef</p>
+</li>
+<li>
+<p>nullValue = null</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_utils_printertest_show_result_as_describe_with_code">Show result as describe with code</h3>
+<div class="paragraph">
+<p>We can use the following code to get values and the code used to obtain it</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">final</span> <span class="nc">String</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Printer</span><span class="o">().</span><span class="na">showResultWithFormat</span><span class="o">(</span>
+        <span class="o">(</span><span class="n">value</span><span class="o">,</span> <span class="n">code</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="s">"Extracted value: `"</span> <span class="o">+</span> <span class="n">value</span> <span class="o">+</span> <span class="s">"` +\nCode to extract:\n----\n"</span> <span class="o">+</span> <span class="n">code</span> <span class="o">+</span> <span class="s">"\n----\n\n"</span><span class="o">,</span>
+        <span class="s">"abcdef"</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">2</span><span class="o">),</span>
+        <span class="s">"abcdef"</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">4</span><span class="o">)</span>
+<span class="o">);</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Result is</p>
+</div>
+<div class="paragraph">
+<p>Extracted value: <code>cdef</code><br>
+Code to extract:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>"abcdef".substring(2)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Extracted value: <code>cd</code><br>
+Code to extract:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>"abcdef".substring(2, 4)</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_utils_printertest_groupbyresult">Group by result</h3>
+<div class="sect3">
+<h4 id="com_github_docastest_doctesting_utils_printertest_groupbyresult_description">Description</h4>
+<div class="paragraph">
+<p>It&#8217;s sometime interesting to group all values that provides the same result.
+It can be used to show several ways of doing the same thing.
+We can simply display result once with all cases that can be used to build it.
+You also can just check that we obtain the same result with different values.
+In that case, there is only one key in the result
+and you can just say that all values are the same.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="com_github_docastest_doctesting_utils_printertest_groupbyresult_applying_a_function">Applying a function</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">final</span> <span class="nc">Map</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;&gt;</span> <span class="n">stringListMap</span> <span class="o">=</span> <span class="nc">Printer</span><span class="o">.</span><span class="na">groupByResult</span><span class="o">(</span>
+        <span class="nl">String:</span><span class="o">:</span><span class="n">toLowerCase</span><span class="o">,</span>
+        <span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="s">"abc"</span><span class="o">,</span> <span class="s">"ABC"</span><span class="o">,</span> <span class="s">"XyZ"</span><span class="o">,</span> <span class="s">"Abc"</span><span class="o">)</span>
+<span class="o">);</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You obtain a map with value returned by the function as key and a list of values that provides the key value.</p>
+</div>
+<div class="paragraph">
+<p><strong>abc</strong>: <code>abc</code>, <code>ABC</code>, <code>Abc</code>
+<br>
+<strong>xyz</strong>: <code>XyZ</code>
+<br></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="com_github_docastest_doctesting_utils_printertest_groupbyresult_using_code_and_result_class">Using code and result class</h4>
+<div class="paragraph">
+<p>You can create an object that associate the code and the value it return.
+This class provides method to help rendering data.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">final</span> <span class="nc">CodeAndResultList</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">codeAndResultList</span> <span class="o">=</span> <span class="nc">Printer</span><span class="o">.</span><span class="na">extractCodes</span><span class="o">(</span>
+        <span class="mi">2</span> <span class="o">+</span> <span class="mi">4</span><span class="o">,</span>
+        <span class="mi">3</span> <span class="o">+</span> <span class="mi">5</span><span class="o">,</span>
+        <span class="mi">3</span> <span class="o">+</span> <span class="mi">3</span>
+<span class="o">);</span>
+
+<span class="c1">// Extract codes grouped by value.</span>
+<span class="nc">Map</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">,</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">CodeAndResult</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;&gt;&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="n">codeAndResultList</span><span class="o">.</span><span class="na">groupBy</span><span class="o">();</span>
+
+<span class="c1">// Format an output grouping codes by value and providing a function to generate lines.</span>
+<span class="kd">final</span> <span class="nc">String</span> <span class="n">output</span> <span class="o">=</span> <span class="n">codeAndResultList</span><span class="o">.</span><span class="na">formatGroupedByValue</span><span class="o">((</span><span class="n">value</span><span class="o">,</span> <span class="n">codes</span><span class="o">)</span> <span class="o">-&gt;</span>
+        <span class="s">"*"</span> <span class="o">+</span> <span class="n">value</span> <span class="o">+</span> <span class="s">"*: "</span> <span class="o">+</span> <span class="nc">Printer</span><span class="o">.</span><span class="na">join</span><span class="o">(</span><span class="n">codes</span><span class="o">,</span> <span class="n">code</span> <span class="o">-&gt;</span> <span class="s">"`"</span> <span class="o">+</span> <span class="n">code</span><span class="o">.</span><span class="na">trim</span><span class="o">()</span> <span class="o">+</span> <span class="s">"`"</span><span class="o">,</span> <span class="s">", "</span><span class="o">)</span>
+<span class="o">);</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>6</strong>: <code>2 + 4</code>, <code>3 + 3</code><br>
+<strong>8</strong>: <code>3 + 5</code></p>
+</div>
+<div class="listingblock">
+<div class="title">Generated asciidoc in output</div>
+<div class="content">
+<pre>*6*: `2 + 4`, `3 + 3` +
+*8*: `3 + 5`</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can change delimiter between values.
+Here, we used " / ".</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="n">codeAndResultList</span><span class="o">.</span><span class="na">formatGroupedByValue</span><span class="o">(</span>
+        <span class="o">(</span><span class="n">value</span><span class="o">,</span> <span class="n">codes</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="s">"*"</span> <span class="o">+</span> <span class="n">value</span> <span class="o">+</span> <span class="s">"*: "</span> <span class="o">+</span> <span class="nc">Printer</span><span class="o">.</span><span class="na">join</span><span class="o">(</span><span class="n">codes</span><span class="o">,</span> <span class="n">code</span> <span class="o">-&gt;</span> <span class="s">"`"</span> <span class="o">+</span> <span class="n">code</span><span class="o">.</span><span class="na">trim</span><span class="o">()</span> <span class="o">+</span> <span class="s">"`"</span><span class="o">)</span>
+        <span class="o">,</span> <span class="s">" / "</span><span class="o">)</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>6</strong>: <code>2 + 4</code>,<code>3 + 3</code> / <strong>8</strong>: <code>3 + 5</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="com_github_docastest_doctesting_utils_printertest_groupbyresult_group_by_a_modified_value">Group by a modified value</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">final</span> <span class="nc">CodeAndResultList</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">codeAndResultList</span> <span class="o">=</span> <span class="nc">Printer</span><span class="o">.</span><span class="na">extractCodes</span><span class="o">(</span>
+        <span class="s">"abc"</span><span class="o">,</span>
+        <span class="s">"ijkl"</span><span class="o">,</span>
+        <span class="s">"xyz"</span><span class="o">,</span>
+        <span class="s">"a"</span> <span class="o">+</span> <span class="s">"b"</span> <span class="o">+</span> <span class="s">"c"</span>
+<span class="o">);</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can group all code that produce the same value.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">final</span> <span class="nc">Map</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">CodeAndResult</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;&gt;&gt;</span> <span class="n">groupedCode</span> <span class="o">=</span> <span class="n">codeAndResultList</span><span class="o">.</span><span class="na">groupBy</span><span class="o">();</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>groupedCode</code> contains:<br>
+<strong>ijkl</strong>: "ijkl"<br>
+<strong>abc</strong>: "abc", "a" + "b" + "c"<br>
+<strong>xyz</strong>: "xyz"</p>
+</div>
+<div class="paragraph">
+<p>If you want to group with another key, you can pass a function to build the key from the value or from the code.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">final</span> <span class="nc">Map</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">,</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">CodeAndResult</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;&gt;&gt;</span> <span class="n">groupedCode</span>
+        <span class="o">=</span> <span class="n">codeAndResultList</span><span class="o">.</span><span class="na">groupBy</span><span class="o">(</span><span class="n">codeAndResult</span> <span class="o">-&gt;</span> <span class="n">codeAndResult</span><span class="o">.</span><span class="na">getValue</span><span class="o">().</span><span class="na">length</span><span class="o">());</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>groupedCode</code> contains:<br>
+<strong>3</strong>: "abc", "xyz", "a" + "b" + "c"<br>
+<strong>4</strong>: "ijkl"</p>
+</div>
+<div class="paragraph">
+<p>You can group using the value after applying a function.
+The key used to group can be of another type than that of the initial value.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="c1">// Format an output grouping codes by value applying a function.</span>
+<span class="kd">final</span> <span class="nc">String</span> <span class="n">output</span> <span class="o">=</span> <span class="n">codeAndResultList</span><span class="o">.</span><span class="na">formatGroupedByValue</span><span class="o">(</span>
+        <span class="o">(</span><span class="n">value</span><span class="o">,</span> <span class="n">code</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">value</span><span class="o">.</span><span class="na">length</span><span class="o">(),</span>
+        <span class="o">(</span><span class="n">value</span><span class="o">,</span> <span class="n">codes</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="s">"*"</span> <span class="o">+</span> <span class="n">value</span> <span class="o">+</span> <span class="s">"*: "</span> <span class="o">+</span> <span class="nc">Printer</span><span class="o">.</span><span class="na">join</span><span class="o">(</span><span class="n">codes</span><span class="o">,</span> <span class="nc">Function</span><span class="o">.</span><span class="na">identity</span><span class="o">(),</span> <span class="s">", "</span><span class="o">),</span>
+        <span class="s">" +\n"</span>
+<span class="o">);</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>3</strong>: "abc", "xyz", "a" + "b" + "c"<br>
+<strong>4</strong>: "ijkl"</p>
+</div>
+<div class="listingblock">
+<div class="title">Generated asciidoc in output</div>
+<div class="content">
+<pre>*3*: "abc", "xyz", "a" + "b" + "c" +
+*4*: "ijkl"</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_utils_printertest_extract_one_code_and_result">Extract one code and result</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">final</span> <span class="nc">CodeAndResult</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">codeAndResultList</span> <span class="o">=</span> <span class="nc">Printer</span><span class="o">.</span><span class="na">extractCode</span><span class="o">(</span>
+        <span class="mi">2</span> <span class="o">+</span> <span class="mi">4</span>
+<span class="o">);</span></code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="mi">2</span> <span class="o">+</span> <span class="mi">4</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Result is 6</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_utils_printertest_extract_one_code_and_result_keep_format">Extract one code and result keep format</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">final</span> <span class="nc">CodeAndResult</span><span class="o">&lt;</span><span class="nc">List</span><span class="o">&gt;</span> <span class="n">codeAndResultList</span> <span class="o">=</span> <span class="nc">Printer</span><span class="o">.</span><span class="na">extractCodeAsItWrite</span><span class="o">(</span>
+        <span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span>
+                <span class="mi">3</span><span class="o">,</span>
+                <span class="mi">4</span><span class="o">)</span>
+<span class="o">);</span></code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span>
+        <span class="mi">3</span><span class="o">,</span>
+        <span class="mi">4</span><span class="o">)</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Result is [2, 3, 4]</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_utils_printertest_simpletools">Simple tools</h3>
+<div class="sect3">
+<h4 id="com_github_docastest_doctesting_utils_printertest_simpletools_join_list_to_string">Join list to string</h4>
+<div class="paragraph">
+<p>We provide a method to transform a list to a string applying a mapper
+It&#8217;s just a encapsulated call to stream, map, collect</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="com_github_docastest_doctesting_utils_printertest_simpletools_join_with_mapper">Join with mapper</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="nc">String</span> <span class="n">result</span> <span class="o">=</span> <span class="nc">Printer</span><span class="o">.</span><span class="na">join</span><span class="o">(</span>
+        <span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="s">"abc"</span><span class="o">,</span> <span class="s">"efg"</span><span class="o">,</span> <span class="s">"ijk"</span><span class="o">),</span>
+        <span class="nl">String:</span><span class="o">:</span><span class="n">toUpperCase</span>
+<span class="o">);</span></code></pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>ABC,EFG,IJK</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="com_github_docastest_doctesting_utils_printertest_simpletools_join_with_separator">Join with separator</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="nc">String</span> <span class="n">result</span> <span class="o">=</span> <span class="nc">Printer</span><span class="o">.</span><span class="na">join</span><span class="o">(</span>
+        <span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="s">"abc"</span><span class="o">,</span> <span class="s">"efg"</span><span class="o">,</span> <span class="s">"ijk"</span><span class="o">),</span>
+        <span class="s">" - "</span>
+<span class="o">);</span></code></pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>abc - efg - ijk</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="com_github_docastest_doctesting_utils_printertest_simpletools_join_with_mapper_and_separator">Join with mapper and separator</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="nc">String</span> <span class="n">result</span> <span class="o">=</span> <span class="nc">Printer</span><span class="o">.</span><span class="na">join</span><span class="o">(</span>
+        <span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="s">"abc"</span><span class="o">,</span> <span class="s">"efg"</span><span class="o">,</span> <span class="s">"ijk"</span><span class="o">),</span>
+        <span class="nl">String:</span><span class="o">:</span><span class="n">toUpperCase</span><span class="o">,</span>
+        <span class="s">" - "</span>
+<span class="o">);</span></code></pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>ABC - EFG - IJK</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="com_github_docastest_doctesting_utils_svggraphtest">Svg graph</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_utils_svggraphtest_an_empty_grid">Generate an empty grid</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">final</span> <span class="nc">String</span> <span class="n">svg</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SvgGraph</span><span class="o">().</span><span class="na">generate</span><span class="o">();</span></code></pre>
+</div>
+</div>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+width="700" height="500"     style="background-color:grey">
+<style>
+.graph {
+    stroke:rgb(200,200,200);
+    stroke-width:1;
+}
+.curve {
+    fill:none;
+    stroke-width:3;
+    marker: url(#markerCircle);
+    stroke:black;
+}
+</style>
+<defs>
+    <marker id="markerCircle" markerWidth="8" markerHeight="8" refX="5" refY="5">
+        <circle cx="5" cy="5" r="1.5" style="stroke: none; fill:#000000;"/>
+    </marker>
+</defs>
+<svg class="graph">
+    <rect fill="white" width="640" height="440" x="30" y="30"/>
+    <g class="grid">
+        <line x1="60" x2="60" y1="440" y2="60"/>
+    </g>
+    <g class="grid">
+        <line x1="60" x2="640" y1="440" y2="440"/>
+    </g>
+
+    <text x="35" y="65">1</text>
+    <line x1="56" x2="64" y1="60" y2="60"/>
+    <text x="35" y="445">0</text>
+    <line x1="56" x2="64" y1="440" y2="440"/>
+
+    <text x="55" y="465">0</text>
+    <line x1="60" x2="60" y1="440" y2="444"/>
+    <text x="635" y="465">1</text>
+    <line x1="640" x2="640" y1="440" y2="444"/>
+</svg>
+
+</svg>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_utils_svggraphtest_specify_grid_size">Specify grid size</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">final</span> <span class="nc">String</span> <span class="n">svg</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SvgGraph</span><span class="o">()</span>
+        <span class="o">.</span><span class="na">withHeight</span><span class="o">(</span><span class="mi">100</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">withWidth</span><span class="o">(</span><span class="mi">200</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">generate</span><span class="o">();</span></code></pre>
+</div>
+</div>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+width="320" height="220"     style="background-color:grey">
+<style>
+.graph {
+    stroke:rgb(200,200,200);
+    stroke-width:1;
+}
+.curve {
+    fill:none;
+    stroke-width:3;
+    marker: url(#markerCircle);
+    stroke:black;
+}
+</style>
+<defs>
+    <marker id="markerCircle" markerWidth="8" markerHeight="8" refX="5" refY="5">
+        <circle cx="5" cy="5" r="1.5" style="stroke: none; fill:#000000;"/>
+    </marker>
+</defs>
+<svg class="graph">
+    <rect fill="white" width="260" height="160" x="30" y="30"/>
+    <g class="grid">
+        <line x1="60" x2="60" y1="160" y2="60"/>
+    </g>
+    <g class="grid">
+        <line x1="60" x2="260" y1="160" y2="160"/>
+    </g>
+
+    <text x="35" y="65">1</text>
+    <line x1="56" x2="64" y1="60" y2="60"/>
+    <text x="35" y="165">0</text>
+    <line x1="56" x2="64" y1="160" y2="160"/>
+
+    <text x="55" y="185">0</text>
+    <line x1="60" x2="60" y1="160" y2="164"/>
+    <text x="255" y="185">1</text>
+    <line x1="260" x2="260" y1="160" y2="164"/>
+</svg>
+
+</svg>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_utils_svggraphtest_one_simple_line">Draw a single line</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">final</span> <span class="nc">String</span> <span class="n">svg</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SvgGraph</span><span class="o">()</span>
+        <span class="o">.</span><span class="na">withLine</span><span class="o">(</span><span class="s">"Values"</span><span class="o">,</span> <span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">10</span><span class="o">))</span>
+        <span class="o">.</span><span class="na">generate</span><span class="o">();</span></code></pre>
+</div>
+</div>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+width="700" height="500"     style="background-color:grey">
+<style>
+.graph {
+    stroke:rgb(200,200,200);
+    stroke-width:1;
+}
+.curve {
+    fill:none;
+    stroke-width:3;
+    marker: url(#markerCircle);
+    stroke:black;
+}
+</style>
+<defs>
+    <marker id="markerCircle" markerWidth="8" markerHeight="8" refX="5" refY="5">
+        <circle cx="5" cy="5" r="1.5" style="stroke: none; fill:#000000;"/>
+    </marker>
+</defs>
+<svg class="graph">
+    <rect fill="white" width="640" height="440" x="30" y="30"/>
+    <g class="grid">
+        <line x1="60" x2="60" y1="440" y2="60"/>
+    </g>
+    <g class="grid">
+        <line x1="60" x2="640" y1="440" y2="440"/>
+    </g>
+
+    <text x="35" y="65">20</text>
+    <line x1="56" x2="64" y1="60" y2="60"/>
+    <text x="35" y="445">0</text>
+    <line x1="56" x2="64" y1="440" y2="440"/>
+
+    <text x="55" y="465">0</text>
+    <line x1="60" x2="60" y1="440" y2="444"/>
+    <text x="635" y="465">2</text>
+    <line x1="640" x2="640" y1="440" y2="444"/>
+</svg>
+<polyline style="stroke:blue" class="curve" points="
+60,440
+350,60
+640,250
+"/>
+</svg>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_utils_svggraphtest_one_simple_line_with_negative_value">Draw a single line with negative values</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">final</span> <span class="nc">String</span> <span class="n">svg</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SvgGraph</span><span class="o">()</span>
+        <span class="o">.</span><span class="na">withLine</span><span class="o">(</span><span class="s">"Values"</span><span class="o">,</span> <span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="o">-</span><span class="mi">20</span><span class="o">,</span> <span class="o">-</span><span class="mi">10</span><span class="o">))</span>
+        <span class="o">.</span><span class="na">generate</span><span class="o">();</span></code></pre>
+</div>
+</div>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+width="700" height="500"     style="background-color:grey">
+<style>
+.graph {
+    stroke:rgb(200,200,200);
+    stroke-width:1;
+}
+.curve {
+    fill:none;
+    stroke-width:3;
+    marker: url(#markerCircle);
+    stroke:black;
+}
+</style>
+<defs>
+    <marker id="markerCircle" markerWidth="8" markerHeight="8" refX="5" refY="5">
+        <circle cx="5" cy="5" r="1.5" style="stroke: none; fill:#000000;"/>
+    </marker>
+</defs>
+<svg class="graph">
+    <rect fill="white" width="640" height="440" x="30" y="30"/>
+    <g class="grid">
+        <line x1="60" x2="60" y1="440" y2="60"/>
+    </g>
+    <g class="grid">
+        <line x1="60" x2="640" y1="60" y2="60"/>
+    </g>
+
+    <text x="35" y="65">0</text>
+    <line x1="56" x2="64" y1="60" y2="60"/>
+    <text x="35" y="445">-20</text>
+    <line x1="56" x2="64" y1="440" y2="440"/>
+
+    <text x="55" y="85">0</text>
+    <line x1="60" x2="60" y1="60" y2="64"/>
+    <text x="635" y="85">2</text>
+    <line x1="640" x2="640" y1="60" y2="64"/>
+</svg>
+<polyline style="stroke:blue" class="curve" points="
+60,60
+350,440
+640,250
+"/>
+</svg>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_utils_svggraphtest_one_line_with_negative_and_postive_values">Draw a single line with negative and positive values</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">final</span> <span class="nc">String</span> <span class="n">svg</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SvgGraph</span><span class="o">()</span>
+        <span class="o">.</span><span class="na">withLine</span><span class="o">(</span><span class="s">"Values"</span><span class="o">,</span> <span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(-</span><span class="mi">15</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="o">-</span><span class="mi">6</span><span class="o">,</span> <span class="mi">30</span><span class="o">,</span> <span class="mi">25</span><span class="o">))</span>
+        <span class="o">.</span><span class="na">generate</span><span class="o">();</span></code></pre>
+</div>
+</div>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+width="700" height="500"     style="background-color:grey">
+<style>
+.graph {
+    stroke:rgb(200,200,200);
+    stroke-width:1;
+}
+.curve {
+    fill:none;
+    stroke-width:3;
+    marker: url(#markerCircle);
+    stroke:black;
+}
+</style>
+<defs>
+    <marker id="markerCircle" markerWidth="8" markerHeight="8" refX="5" refY="5">
+        <circle cx="5" cy="5" r="1.5" style="stroke: none; fill:#000000;"/>
+    </marker>
+</defs>
+<svg class="graph">
+    <rect fill="white" width="640" height="440" x="30" y="30"/>
+    <g class="grid">
+        <line x1="60" x2="60" y1="440" y2="60"/>
+    </g>
+    <g class="grid">
+        <line x1="60" x2="640" y1="314" y2="314"/>
+    </g>
+
+    <text x="35" y="65">30</text>
+    <line x1="56" x2="64" y1="60" y2="60"/>
+    <text x="35" y="445">-15</text>
+    <line x1="56" x2="64" y1="440" y2="440"/>
+
+    <text x="55" y="339">0</text>
+    <line x1="60" x2="60" y1="314" y2="318"/>
+    <text x="635" y="339">4</text>
+    <line x1="640" x2="640" y1="314" y2="318"/>
+</svg>
+<polyline style="stroke:blue" class="curve" points="
+60,440
+205,280
+350,364
+495,60
+640,102
+"/>
+</svg>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_utils_svggraphtest_one_line_with_float_values">Draw a single line with float values</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">final</span> <span class="nc">String</span> <span class="n">svg</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SvgGraph</span><span class="o">()</span>
+        <span class="o">.</span><span class="na">withLine</span><span class="o">(</span><span class="s">"Values"</span><span class="o">,</span> <span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(-</span><span class="mf">2.5</span><span class="o">,</span> <span class="mf">1.2</span><span class="o">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="o">,</span> <span class="mf">3.6</span><span class="o">))</span>
+        <span class="o">.</span><span class="na">generate</span><span class="o">();</span></code></pre>
+</div>
+</div>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+width="700" height="500"     style="background-color:grey">
+<style>
+.graph {
+    stroke:rgb(200,200,200);
+    stroke-width:1;
+}
+.curve {
+    fill:none;
+    stroke-width:3;
+    marker: url(#markerCircle);
+    stroke:black;
+}
+</style>
+<defs>
+    <marker id="markerCircle" markerWidth="8" markerHeight="8" refX="5" refY="5">
+        <circle cx="5" cy="5" r="1.5" style="stroke: none; fill:#000000;"/>
+    </marker>
+</defs>
+<svg class="graph">
+    <rect fill="white" width="640" height="440" x="30" y="30"/>
+    <g class="grid">
+        <line x1="60" x2="60" y1="440" y2="60"/>
+    </g>
+    <g class="grid">
+        <line x1="60" x2="640" y1="278" y2="278"/>
+    </g>
+
+    <text x="35" y="65">4</text>
+    <line x1="56" x2="64" y1="60" y2="60"/>
+    <text x="35" y="445">-3</text>
+    <line x1="56" x2="64" y1="440" y2="440"/>
+
+    <text x="55" y="303">0</text>
+    <line x1="60" x2="60" y1="278" y2="282"/>
+    <text x="634" y="303">3</text>
+    <line x1="639" x2="639" y1="278" y2="282"/>
+</svg>
+<polyline style="stroke:blue" class="curve" points="
+60,413
+253,212
+446,305
+639,82
+"/>
+</svg>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_utils_svggraphtest_multi_lines">Draw several lines</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">final</span> <span class="nc">String</span> <span class="n">svg</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SvgGraph</span><span class="o">()</span>
+        <span class="o">.</span><span class="na">withLine</span><span class="o">(</span><span class="s">"Line A"</span><span class="o">,</span> <span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(-</span><span class="mi">15</span><span class="o">,</span> <span class="mi">6</span><span class="o">,</span> <span class="mi">30</span><span class="o">,</span> <span class="mi">25</span><span class="o">))</span>
+        <span class="o">.</span><span class="na">withLine</span><span class="o">(</span><span class="s">"Line B"</span><span class="o">,</span> <span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="mi">12</span><span class="o">,</span> <span class="mi">45</span><span class="o">,</span> <span class="mi">17</span><span class="o">))</span>
+        <span class="o">.</span><span class="na">withLine</span><span class="o">(</span><span class="s">"Line C"</span><span class="o">,</span> <span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(-</span><span class="mi">5</span><span class="o">,</span> <span class="o">-</span><span class="mi">10</span><span class="o">,</span> <span class="o">-</span><span class="mi">20</span><span class="o">,</span> <span class="mi">8</span><span class="o">))</span>
+        <span class="o">.</span><span class="na">generate</span><span class="o">();</span></code></pre>
+</div>
+</div>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+width="700" height="500"     style="background-color:grey">
+<style>
+.graph {
+    stroke:rgb(200,200,200);
+    stroke-width:1;
+}
+.curve {
+    fill:none;
+    stroke-width:3;
+    marker: url(#markerCircle);
+    stroke:black;
+}
+</style>
+<defs>
+    <marker id="markerCircle" markerWidth="8" markerHeight="8" refX="5" refY="5">
+        <circle cx="5" cy="5" r="1.5" style="stroke: none; fill:#000000;"/>
+    </marker>
+</defs>
+<svg class="graph">
+    <rect fill="white" width="640" height="440" x="30" y="30"/>
+    <g class="grid">
+        <line x1="60" x2="60" y1="440" y2="60"/>
+    </g>
+    <g class="grid">
+        <line x1="60" x2="640" y1="324" y2="324"/>
+    </g>
+
+    <text x="35" y="65">45</text>
+    <line x1="56" x2="64" y1="60" y2="60"/>
+    <text x="35" y="445">-20</text>
+    <line x1="56" x2="64" y1="440" y2="440"/>
+
+    <text x="55" y="349">0</text>
+    <line x1="60" x2="60" y1="324" y2="328"/>
+    <text x="634" y="349">3</text>
+    <line x1="639" x2="639" y1="324" y2="328"/>
+</svg>
+<polyline style="stroke:blue" class="curve" points="
+60,411
+253,288
+446,148
+639,177
+"/>
+<polyline style="stroke:red" class="curve" points="
+60,294
+253,253
+446,60
+639,224
+"/>
+<polyline style="stroke:green" class="curve" points="
+60,353
+253,382
+446,440
+639,277
+"/>
+</svg>
+</div>
+<div class="sect2">
+<h3 id="com_github_docastest_doctesting_utils_svggraphtest_apply_factor_on_axes">Apply factor on axes</h3>
+<div class="paragraph">
+<p>By default, the factor apply for axis is calculated to fill the space.
+This factor could be set manually.
+It can be use to display several graph with the same scale.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">final</span> <span class="nc">String</span> <span class="n">svg</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SvgGraph</span><span class="o">()</span>
+        <span class="o">.</span><span class="na">withXFactor</span><span class="o">(</span><span class="mi">290</span><span class="o">)</span> <span class="c1">// 580 / 2 =&gt; grid width / nb values</span>
+        <span class="o">.</span><span class="na">withYFactor</span><span class="o">(</span><span class="mi">10</span><span class="o">)</span> <span class="c1">// 380 / 38 =&gt; grid height / max value</span>
+        <span class="o">.</span><span class="na">withLine</span><span class="o">(</span><span class="s">"Values"</span><span class="o">,</span> <span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span> <span class="mi">38</span><span class="o">,</span> <span class="mi">20</span><span class="o">)).</span><span class="na">generate</span><span class="o">();</span></code></pre>
+</div>
+</div>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+width="700" height="500"     style="background-color:grey">
+<style>
+.graph {
+    stroke:rgb(200,200,200);
+    stroke-width:1;
+}
+.curve {
+    fill:none;
+    stroke-width:3;
+    marker: url(#markerCircle);
+    stroke:black;
+}
+</style>
+<defs>
+    <marker id="markerCircle" markerWidth="8" markerHeight="8" refX="5" refY="5">
+        <circle cx="5" cy="5" r="1.5" style="stroke: none; fill:#000000;"/>
+    </marker>
+</defs>
+<svg class="graph">
+    <rect fill="white" width="640" height="440" x="30" y="30"/>
+    <g class="grid">
+        <line x1="60" x2="60" y1="440" y2="60"/>
+    </g>
+    <g class="grid">
+        <line x1="60" x2="640" y1="440" y2="440"/>
+    </g>
+
+    <text x="35" y="65">38</text>
+    <line x1="56" x2="64" y1="60" y2="60"/>
+    <text x="35" y="445">0</text>
+    <line x1="56" x2="64" y1="440" y2="440"/>
+
+    <text x="55" y="465">0</text>
+    <line x1="60" x2="60" y1="440" y2="444"/>
+    <text x="635" y="465">2</text>
+    <line x1="640" x2="640" y1="440" y2="444"/>
+</svg>
+<polyline style="stroke:blue" class="curve" points="
+60,340
+350,60
+640,240
+"/>
+</svg>
+<div class="paragraph">
+<p>Here, with a max value at 38 and a factor at 4, the max point is 38 * 4 = 152
+This point is only 8 pixels below the height of the grid specified (160).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">final</span> <span class="nc">String</span> <span class="n">svg</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SvgGraph</span><span class="o">()</span>
+        <span class="o">.</span><span class="na">withHeight</span><span class="o">(</span><span class="mi">160</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">withYFactor</span><span class="o">(</span><span class="mi">4</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">withLine</span><span class="o">(</span><span class="s">"Values"</span><span class="o">,</span> <span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span> <span class="mi">38</span><span class="o">,</span> <span class="mi">20</span><span class="o">)).</span><span class="na">generate</span><span class="o">();</span></code></pre>
+</div>
+</div>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+width="700" height="280"     style="background-color:grey">
+<style>
+.graph {
+    stroke:rgb(200,200,200);
+    stroke-width:1;
+}
+.curve {
+    fill:none;
+    stroke-width:3;
+    marker: url(#markerCircle);
+    stroke:black;
+}
+</style>
+<defs>
+    <marker id="markerCircle" markerWidth="8" markerHeight="8" refX="5" refY="5">
+        <circle cx="5" cy="5" r="1.5" style="stroke: none; fill:#000000;"/>
+    </marker>
+</defs>
+<svg class="graph">
+    <rect fill="white" width="640" height="220" x="30" y="30"/>
+    <g class="grid">
+        <line x1="60" x2="60" y1="220" y2="60"/>
+    </g>
+    <g class="grid">
+        <line x1="60" x2="640" y1="220" y2="220"/>
+    </g>
+
+    <text x="35" y="73">38</text>
+    <line x1="56" x2="64" y1="68" y2="68"/>
+    <text x="35" y="225">0</text>
+    <line x1="56" x2="64" y1="220" y2="220"/>
+
+    <text x="55" y="245">0</text>
+    <line x1="60" x2="60" y1="220" y2="224"/>
+    <text x="635" y="245">2</text>
+    <line x1="640" x2="640" y1="220" y2="224"/>
+</svg>
+<polyline style="stroke:blue" class="curve" points="
+60,180
+350,68
+640,140
+"/>
+</svg>
+<div id="project_home">
+    <a title="home" href="../../../../index.html">Doc as test</a>
+</div>
+<style>
+/*
+Own classes:
+includeblock: format an include as a block.
+*/
+
+:root {
+  --bg1: white;
+  --bg2: #cefbd7;
+  --logo-height: 100;
+  --shadow-color: #084f34;
+  --title-color: #7a2518;
+  --code-background-color: #222222;
+
+  --media-small-header-height:50px;
+}
+
+
+#content {
+   max-width: unset;
+   padding-left: 5%;
+   padding-right: 5%;
+}
+
+table {
+    background: var(--bg1);
+}
+
+table.tableblock, th.tableblock, td.tableblock {
+    border-color: black;
+}
+
+th.tableblock {
+    background: var(--bg2);
+}
+
+#toc.toc2, #project_home {
+    background: var(--bg2);
+    box-shadow: 5px 5px 5px var(--shadow-color);
+    font-size: 1.1em;
+    width: 260px; /* Do not use 'em' to be independent of the font-size */
+    padding: 1.25em 1em;
+    position: fixed;
+    left: 0;
+}
+
+#toc.toc2 {
+    top: var(--logo-height); /* Height of the project_home */
+    overflow: scroll; /* To avoid menu position change when scoll bar appear */
+    scrollbar-color: var(--bg1) var(--bg2);
+}
+
+#project_home {
+    top: 0;
+    height: var(--logo-height); /* toc2 need to be position after this height */
+
+    font-family: "Noto Serif","DejaVu Serif",serif;
+    font-style: italic;
+    font-size:2em;
+}
+
+#toc.toc2 a {
+    color: #7a2518;
+}
+
+#toc.toc2 #toctitle {
+    font-family: "Noto Serif","DejaVu Serif",serif;
+    font-style: italic;
+
+    color: var(--title-color);
+}
+
+body {
+    background: var(--bg1) !important;
+}
+
+h1 {
+    font-family: "Noto Serif","DejaVu Serif",serif;
+    font-style: italic;
+
+    color: var(--title-color);
+    font-weight: 400;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 2em;
+    border-top: solid;
+    padding-top: 0.2em;
+}
+
+:not(pre):not([class^="L"]) > code {
+    background: var(--bg2);
+}
+
+.listingblock .content pre,
+.listingblock .content pre:not(.highlight) {
+    background: var(--code-background-color);
+    box-shadow: 5px 5px 5px var(--shadow-color);
+}
+
+/* Remove margin for listingblock in table */
+td.tableblock > .content > .listingblock {
+    margin: 0em;
+}
+
+.includeblock{
+    padding: 1em;
+    background: #fffef7;
+    box-shadow: 5px 5px 5px var(--shadow-color);
+}
+
+.literalblock pre,
+.listingblock > .content > pre:not(.highlight),
+.exampleblock > .content {
+    background: var(--bg2);
+    box-shadow: 5px 5px 5px var(--shadow-color);
+}
+
+/* Menu */
+
+.sectlevel2 {
+    display: none;
+    height: 0;
+    opacity:0;
+}
+
+.sectlevel1>li {
+    padding-left: 0.5em;
+}
+.sectlevel1>li.menu_open {
+    font-weight: bold;
+    background-color: var(--bg2);
+    padding: 0.5em;
+}
+
+.sectlevel1>li.menu_open .sectlevel2 {
+    display: block;
+    height: auto;
+    opacity:1;
+    font-weight: normal;
+}
+
+.inline {
+   display: inline-block;
+   vertical-align: top;
+   margin-right: 2em;
+}
+
+
+/*
+To add a section that render asciidoc you can open a block:
+
+[.rendering]
+--
+My text
+--
+
+or, if you need to include a file, you could not do it inside a block.
+Instead of that, you can create a section with title.
+
+[.rendering]
+== Rendering of the result
+
+The title will be hide and all the content has a specific css.
+
+
+*/
+div.sectionbody .rendering > h2:first-child,
+div.sectionbody .rendering > h3:first-child,
+div.sectionbody .rendering > h4:first-child {
+    display: none;
+}
+/*
+div.sectionbody .rendering > h2:first-child + div,
+div.sectionbody .rendering > h3:first-child + div,
+div.sectionbody .rendering > h4:first-child + div {
+*/
+
+.openblock.rendering,
+div.sectionbody .rendering,
+div.sectionbody .rendering,
+div.sectionbody .rendering {
+    padding: 20px;
+    margin-bottom: 1em;
+    background: var(--bg1);
+    filter: brightness(0.90);
+    box-shadow: 10px 5px 5px var(--shadow-color);
+    border: 1px solid var(--shadow-color);
+}
+div.sectionbody .rendering h3,
+div.sectionbody .rendering h4,
+div.sectionbody .rendering h5 {
+    margin-top: 0px;
+}
+
+.openblock.rendering .title1,
+div.sectionbody .rendering .title1 {
+    font-size: 2em;
+    font-family: "Open Sans","DejaVu Sans",sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #ba3925;
+    text-rendering: optimizeLegibility;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+@media (max-width: 800px) {
+  #toc {
+    display: none;
+  }
+  body.toc2 {
+    padding-left:0em;
+    padding-top:var(--media-small-header-height);
+  }
+
+  #project_home {
+    height: var(--media-small-header-height);
+    width: 100%;
+    padding: 2px;
+    text-align: center;
+  }
+}
+</style>
+<script type="text/javascript">
+function toggleMenuOnClick(menuItem) {
+    menuItem.getElementsByTagName("a")[0].addEventListener(
+        'click',
+        event => {
+            document.querySelectorAll(".sectlevel1 > li").forEach(function(element) {
+                if (element != menuItem) {
+                    element.classList.remove("menu_open");
+                }
+            });
+            event.currentTarget.parentNode.classList.toggle("menu_open");
+        }
+    );
+}
+
+window.addEventListener( "load",
+    function() {
+        menus = document.querySelectorAll(".sectlevel1 > li");
+        menus.forEach(toggleMenuOnClick);
+
+        // Move logo to the header
+        const project_home = document.getElementById('project_home');
+        const header = document.getElementById('header');
+        header.appendChild(project_home);
+
+     }
+);
+</script>
+</div>
+</div>
+</div>
+</div>
+<style>
+pre.rouge table td { padding: 5px; }
+pre.rouge table pre { margin: 0; }
+pre.rouge {
+  color: #faf6e4;
+  background-color: #122b3b;
+}
+pre.rouge .gl {
+  color: #dee5e7;
+  background-color: #4e5d62;
+}
+pre.rouge .gp {
+  color: #a8e1fe;
+  font-weight: bold;
+}
+pre.rouge .c, pre.rouge .ch, pre.rouge .cd, pre.rouge .cm, pre.rouge .cpf, pre.rouge .c1, pre.rouge .cs {
+  color: #6c8b9f;
+  font-style: italic;
+}
+pre.rouge .cp {
+  color: #b2fd6d;
+  font-weight: bold;
+}
+pre.rouge .err {
+  color: #fefeec;
+  background-color: #cc0000;
+}
+pre.rouge .gr {
+  color: #cc0000;
+  font-weight: bold;
+  font-style: italic;
+}
+pre.rouge .k, pre.rouge .kd, pre.rouge .kv {
+  color: #f6dd62;
+  font-weight: bold;
+}
+pre.rouge .o, pre.rouge .ow {
+  color: #4df4ff;
+  font-weight: bold;
+}
+pre.rouge .p, pre.rouge .pi {
+  color: #4df4ff;
+}
+pre.rouge .gd {
+  color: #cc0000;
+}
+pre.rouge .gi {
+  color: #b2fd6d;
+}
+pre.rouge .ge {
+  font-style: italic;
+}
+pre.rouge .gs {
+  font-weight: bold;
+}
+pre.rouge .gt {
+  color: #dee5e7;
+  background-color: #4e5d62;
+}
+pre.rouge .kc {
+  color: #f696db;
+  font-weight: bold;
+}
+pre.rouge .kn {
+  color: #ffb000;
+  font-weight: bold;
+}
+pre.rouge .kp {
+  color: #ffb000;
+  font-weight: bold;
+}
+pre.rouge .kr {
+  color: #ffb000;
+  font-weight: bold;
+}
+pre.rouge .gh {
+  color: #ffb000;
+  font-weight: bold;
+}
+pre.rouge .gu {
+  color: #ffb000;
+  font-weight: bold;
+}
+pre.rouge .kt {
+  color: #b2fd6d;
+  font-weight: bold;
+}
+pre.rouge .no {
+  color: #b2fd6d;
+  font-weight: bold;
+}
+pre.rouge .nc {
+  color: #b2fd6d;
+  font-weight: bold;
+}
+pre.rouge .nd {
+  color: #b2fd6d;
+  font-weight: bold;
+}
+pre.rouge .nn {
+  color: #b2fd6d;
+  font-weight: bold;
+}
+pre.rouge .bp {
+  color: #b2fd6d;
+  font-weight: bold;
+}
+pre.rouge .ne {
+  color: #b2fd6d;
+  font-weight: bold;
+}
+pre.rouge .nl {
+  color: #ffb000;
+  font-weight: bold;
+}
+pre.rouge .nt {
+  color: #ffb000;
+  font-weight: bold;
+}
+pre.rouge .m, pre.rouge .mb, pre.rouge .mf, pre.rouge .mh, pre.rouge .mi, pre.rouge .il, pre.rouge .mo, pre.rouge .mx {
+  color: #f696db;
+  font-weight: bold;
+}
+pre.rouge .ld {
+  color: #f696db;
+  font-weight: bold;
+}
+pre.rouge .ss {
+  color: #f696db;
+  font-weight: bold;
+}
+pre.rouge .s, pre.rouge .sa, pre.rouge .sb, pre.rouge .dl, pre.rouge .sd, pre.rouge .s2, pre.rouge .sh, pre.rouge .sx, pre.rouge .sr, pre.rouge .s1 {
+  color: #fff0a6;
+  font-weight: bold;
+}
+pre.rouge .se {
+  color: #4df4ff;
+  font-weight: bold;
+}
+pre.rouge .sc {
+  color: #4df4ff;
+  font-weight: bold;
+}
+pre.rouge .si {
+  color: #4df4ff;
+  font-weight: bold;
+}
+pre.rouge .nb {
+  font-weight: bold;
+}
+pre.rouge .ni {
+  color: #999999;
+  font-weight: bold;
+}
+pre.rouge .w {
+  color: #BBBBBB;
+}
+pre.rouge .go {
+  color: #BBBBBB;
+}
+pre.rouge .nf, pre.rouge .fm {
+  color: #a8e1fe;
+}
+pre.rouge .py {
+  color: #a8e1fe;
+}
+pre.rouge .na {
+  color: #a8e1fe;
+}
+pre.rouge .nv, pre.rouge .vc, pre.rouge .vg, pre.rouge .vi, pre.rouge .vm {
+  color: #a8e1fe;
+  font-weight: bold;
+}
+</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+})
+MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready", function () {
+  MathJax.InputJax.AsciiMath.postfilterHooks.Add(function (data, node) {
+    if ((node = data.script.parentNode) && (node = node.parentNode) && node.classList.contains('stemblock')) {
+      data.math.root.display = "block"
+    }
+    return data
+  })
+})
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+</body>
+</html>
