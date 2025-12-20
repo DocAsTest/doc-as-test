@@ -1,5 +1,6 @@
 name: Publish doc
 # V1.0
+# Require: Settings -> Action -> General -> Workflow permissions and choose read and write permissions
 on:
   push:
     branches: [ develop ]
@@ -9,7 +10,7 @@ on:
 env:
   root_branch: 'develop'
   doc_branch: 'pages'
-  docs_generated: 'tmp/docs'
+  docs_generated: 'target/docs'
   docs_published: 'docs'
   #      release_pattern: 'release-*'
   release_pattern: 'doc-as-test-*'
