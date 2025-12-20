@@ -10,7 +10,7 @@ on:
 env:
   root_branch: 'develop'
   doc_branch: 'pages'
-  docs_generated: 'target/docs'
+  docs_generated: 'target/docs/doc-as-test'
   docs_published: 'docs'
   #      release_pattern: 'release-*'
   release_pattern: 'doc-as-test-*'
