@@ -80,7 +80,7 @@
                     <attributes>
                         <github-repo>https://github.com/DocAsTest/doc-as-test/tree/master/${project.artifactId}
                         </github-repo>
-                        <github-pages>https://docastest.github.io/doc-as-test/${project.artifactId}/
+                        <github-pages>https://docastest.github.io/${project.artifactId}/
                         </github-pages>
                         <is-html-doc />
                     </attributes>
