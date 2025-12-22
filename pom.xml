@@ -4,7 +4,7 @@
 
     <groupId>com.github.doc-as-test</groupId>
     <artifactId>doc-as-test</artifactId>
-    <version>2.0.1-SNAPSHOT</version>
+    <version>2.0.1</version>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -34,7 +34,7 @@
         <connection>scm:git:https://github.com/DocAsTest/doc-as-test.git</connection>
         <developerConnection>scm:git:https://github.com/DocAsTest/doc-as-test.git</developerConnection>
         <url>git@github.com:idhub-io/idhub-api.git</url>
-        <tag>HEAD</tag>
+        <tag>doc-as-test-2.0.1</tag>
     </scm>
     <build>
         <plugins>
