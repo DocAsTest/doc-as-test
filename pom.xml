@@ -27,7 +27,7 @@
         <repository>
             <id>github</id>
             <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/doc-as-test/doc-as-test</url>
+            <url>https://maven.pkg.github.com/DocAsTest/doc-as-test</url>
         </repository>
     </distributionManagement>
     <scm>

@@ -39,4 +39,5 @@ jobs:
     - name: Publish JAR
       run: mvn -B release:prepare release:perform --file pom.xml
       env:
+        GITHUB_USERNAME: ${{ github.actor }}
         GITHUB_TOKEN: ${{ github.token }}
