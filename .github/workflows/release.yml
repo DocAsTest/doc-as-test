@@ -37,7 +37,7 @@ jobs:
       uses: kamiazya/setup-graphviz@v1
 
     - name: Publish JAR
-      run: mvn -B release:prepare release:perform
+      run: mvn -X -B release:prepare release:perform
       env:
         GITHUB_USERNAME: ${{ github.actor }}
         GITHUB_TOKEN: ${{ github.token }}
