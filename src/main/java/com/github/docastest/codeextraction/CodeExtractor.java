@@ -18,10 +18,7 @@ import java.lang.reflect.Method;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.function.Function;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -33,17 +30,28 @@ public class CodeExtractor {
     public static final String TAG_BEGIN = ">>>";
     public static final String TAG_END = "<<<";
     private static final ClassFinder classFinder = new ClassFinder();
-    private static Path TEST_PATH;
-    private static Path SOURCE_PATH;
+    private static MultiPath sourcePaths;
     private static ParsedClassRepository parsedClassRepository;
+
+    private static class MultiPath {
+        final Set<Path> paths;
+
+        MultiPath(Set<Path> paths) {
+            this.paths = paths;
+        }
+
+        Optional<Path> locateInPaths(Path path) {
+            return paths.stream().map(p -> p.resolve(path)).filter(p -> p.toFile().isFile()).findFirst();
+        }
+    }
 
     public static void clearCache() {
         parsedClassRepository.clearCache();
     }
-    public static void init(Path testPath, Path sourcePath) {
-        TEST_PATH = testPath;
-        SOURCE_PATH = sourcePath;
-        parsedClassRepository = new ParsedClassRepository(TEST_PATH, SOURCE_PATH);
+
+    public static void init(Path... paths) {
+        sourcePaths = new MultiPath(Arrays.stream(paths).collect(Collectors.toSet()));
+        parsedClassRepository = new ParsedClassRepository(paths);
     }
 
     private static ParsedClassRepository getDefaultParsedClassRepository() {
@@ -142,7 +150,7 @@ public class CodeExtractor {
         }
 
         public RangeExtractor(Class<?> classToDetermineFile) {
-            this(TEST_PATH.resolve(CodePath.toPath(classToDetermineFile)));
+            this(sourcePaths.locateInPaths(CodePath.toPath(classToDetermineFile)).orElse(null));
         }
 
         protected String extract(NodeWithRange<?> n) {
@@ -354,7 +362,12 @@ public class CodeExtractor {
         public ArgumentCodeOfMethodCallerFromSource(StackTraceElement callerStack) {
             super(callerStack);
             final String declaringClass = callerStack.getClassName().split("\\$")[0];
-            this.fileName = TEST_PATH.resolve(declaringClass.replace('.', '/') + ".java").toString();
+            Optional<String> fullPath = sourcePaths.locateInPaths(Paths.get(declaringClass.replace('.', '/') + ".java")).map(Path::toString);
+            if (fullPath.isPresent()) {
+                this.fileName = fullPath.get();
+            } else {
+                throw new RuntimeException("File not found in source paths");
+            }
         }
 
         protected <T extends Node> void extractFromNode(T n, List<String> codes, Function<T, NodeList<Expression>> argumentGetter) {
