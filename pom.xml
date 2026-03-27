@@ -34,7 +34,7 @@
     <scm>
         <connection>scm:git:https://github.com/DocAsTest/doc-as-test.git</connection>
         <developerConnection>scm:git:https://github.com/DocAsTest/doc-as-test.git</developerConnection>
-        <url>git@github.com:idhub-io/idhub-api.git</url>
+        <url>git@github.com:DocAsTest/doc-as-test.git</url>
         <tag>HEAD</tag>
     </scm>
     <build>
