@@ -5,6 +5,9 @@ name: Publish package to GitHub Packages
 on:
   release:
     types: [created]
+  push:
+    branches:
+      - main
 
   workflow_dispatch:
 
@@ -29,6 +32,6 @@ jobs:
     - name: Install graphviz
       uses: kamiazya/setup-graphviz@v1
     - name: Publish package
-      run: mvn --batch-mode release:prepare release:perform
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: mvn --batch-mode release:prepare release:perform
