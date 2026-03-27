@@ -30,6 +30,7 @@
             <url>https://maven.pkg.github.com/DocAsTest/doc-as-test</url>
         </repository>
     </distributionManagement>
+
     <scm>
         <connection>scm:git:git://github.com/DocAsTest/doc-as-test.git</connection>
         <developerConnection>scm:git:git://github.com/DocAsTest/doc-as-test.git</developerConnection>
