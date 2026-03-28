@@ -71,63 +71,63 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>${maven-jar-plugin.version}</version>
             </plugin>
-            <plugin>
-                <groupId>org.asciidoctor</groupId>
-                <artifactId>asciidoctor-maven-plugin</artifactId>
-                <version>${asciidoctor.maven.plugin.version}</version>
-                <configuration>
-                    <sourceDirectory>src/test/docs</sourceDirectory>
-                    <outputDirectory>target/docs/doc-as-test</outputDirectory>
-                    <preserveDirectories>true</preserveDirectories>
-                    <relativeBaseDir>true</relativeBaseDir>
-                    <backend>html</backend>
-                    <attributes>
-                        <github-repo>https://github.com/DocAsTest/doc-as-test/tree/master/${project.artifactId}
-                        </github-repo>
-                        <github-pages>https://docastest.github.io/${project.artifactId}/
-                        </github-pages>
-                        <is-html-doc />
-                    </attributes>
-                    <logHandler>
-                        <failIf>
-                            <severity>ERROR</severity>
-                        </failIf>
-                    </logHandler>
-                    <resources>
-                        <resource>
-                            <directory>src/test/resources</directory>
-                            <includes>
-                                <include>**/*.jpg</include>
-                                <include>**/*.gif</include>
-                                <include>**/*.png</include>
-                                <include>**/*.svg</include>
-                            </includes>
-                        </resource>
-                    </resources>
-                    <requires>
-                        <require>asciidoctor-diagram</require>
-                    </requires>
-                </configuration>
+<!--            <plugin>-->
+<!--                <groupId>org.asciidoctor</groupId>-->
+<!--                <artifactId>asciidoctor-maven-plugin</artifactId>-->
+<!--                <version>${asciidoctor.maven.plugin.version}</version>-->
+<!--                <configuration>-->
+<!--                    <sourceDirectory>src/test/docs</sourceDirectory>-->
+<!--                    <outputDirectory>target/docs/doc-as-test</outputDirectory>-->
+<!--                    <preserveDirectories>true</preserveDirectories>-->
+<!--                    <relativeBaseDir>true</relativeBaseDir>-->
+<!--                    <backend>html</backend>-->
+<!--                    <attributes>-->
+<!--                        <github-repo>https://github.com/DocAsTest/doc-as-test/tree/master/${project.artifactId}-->
+<!--                        </github-repo>-->
+<!--                        <github-pages>https://docastest.github.io/${project.artifactId}/-->
+<!--                        </github-pages>-->
+<!--                        <is-html-doc />-->
+<!--                    </attributes>-->
+<!--                    <logHandler>-->
+<!--                        <failIf>-->
+<!--                            <severity>ERROR</severity>-->
+<!--                        </failIf>-->
+<!--                    </logHandler>-->
+<!--                    <resources>-->
+<!--                        <resource>-->
+<!--                            <directory>src/test/resources</directory>-->
+<!--                            <includes>-->
+<!--                                <include>**/*.jpg</include>-->
+<!--                                <include>**/*.gif</include>-->
+<!--                                <include>**/*.png</include>-->
+<!--                                <include>**/*.svg</include>-->
+<!--                            </includes>-->
+<!--                        </resource>-->
+<!--                    </resources>-->
+<!--                    <requires>-->
+<!--                        <require>asciidoctor-diagram</require>-->
+<!--                    </requires>-->
+<!--                </configuration>-->
 
 
-                <dependencies>
-                    <dependency>
-                        <groupId>org.asciidoctor</groupId>
-                        <artifactId>asciidoctorj-diagram</artifactId>
-                        <version>${asciidoctorj.diagram.version}</version>
-                    </dependency>
-                </dependencies>
+<!--                <dependencies>-->
+<!--                    <dependency>-->
+<!--                        <groupId>org.asciidoctor</groupId>-->
+<!--                        <artifactId>asciidoctorj-diagram</artifactId>-->
+<!--                        <version>${asciidoctorj.diagram.version}</version>-->
+<!--                    </dependency>-->
+<!--                </dependencies>-->
 
-                <executions>
-                    <execution>
-                        <id>asciidoc-to-html</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>process-asciidoc</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>asciidoc-to-html</id>-->
+<!--                        <phase>package</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>process-asciidoc</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
         </plugins>
     </build>
 
