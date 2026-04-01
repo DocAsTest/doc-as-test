@@ -14,9 +14,6 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
 
     steps:
     - uses: actions/checkout@v5
@@ -34,4 +31,4 @@ jobs:
     - name: Publish package
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: mvn --batch-mode release:prepare release:perform
+      run: mvn -e --batch-mode release:prepare release:perform
