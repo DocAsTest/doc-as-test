@@ -31,22 +31,23 @@ public class InstallingLibrary {
     }
 
     protected String getContent() {
-        final String dependency = "        <dependency>\n" +
-                "            <groupId>org.sfvl</groupId>\n" +
-                "            <artifactId>documentationtesting</artifactId>\n" +
-                "            <version>${documentationtesting.version}</version>\n" +
-                "            <scope>test</scope>\n" +
-                "        </dependency>";
+        final String dependency = String.join("\n",
+                "        <dependency>",
+                "            <groupId>com.github.docastest</groupId>",
+                "            <artifactId>doc-as-test</artifactId>",
+                "            <version>${doc-as-test.version}</version>",
+                "            <scope>test</scope>",
+                "        </dependency>");
 
-        return "We use the library link:https://github.com/sfauvel/documentationtesting[documentationtesting]\n" +
+        return "We use the library link:https://github.com/DocAsTest/doc-as-test[doc-as-test]\n" +
                 "which provides what we need to get started.\n" +
-                "For a complete description of how to use it go to the link:https://sfauvel.github.io/documentationtesting/documentationtesting[documentation site]\n" +
+                "For a complete description of how to use it go to the link:https://docastest.github.io/doc-as-test/[doc-as-test site]\n" +
                 "\n" +
                 "The library is not yet on a public repository.\n" +
                 "To use it, you need to download and install it.\n" +
                 "\n" +
                 "You have to download `.jar` and `.pom` from\n" +
-                "link:https://github.com/sfauvel/documentationtesting/packages/538792[last Documentation Testing release]\n" +
+                "link:https://github.com/DocAsTest/doc-as-test/packages/2941171[last doc-as-test release]\n" +
                 "\n" +
                 "Run this maven command to install it:\n" +
                 "----\n" +

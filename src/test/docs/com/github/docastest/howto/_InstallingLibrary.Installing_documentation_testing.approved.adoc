@@ -1,14 +1,14 @@
 ifndef::ROOT_PATH[:ROOT_PATH: ../../../..]
 
-We use the library link:https://github.com/sfauvel/documentationtesting[documentationtesting]
+We use the library link:https://github.com/DocAsTest/doc-as-test[doc-as-test]
 which provides what we need to get started.
-For a complete description of how to use it go to the link:https://sfauvel.github.io/documentationtesting/documentationtesting[documentation site]
+For a complete description of how to use it go to the link:https://docastest.github.io/doc-as-test/[doc-as-test site]
 
 The library is not yet on a public repository.
 To use it, you need to download and install it.
 
 You have to download `.jar` and `.pom` from
-link:https://github.com/sfauvel/documentationtesting/packages/538792[last Documentation Testing release]
+link:https://github.com/DocAsTest/doc-as-test/packages/2941171[last doc-as-test release]
 
 Run this maven command to install it:
 ----
@@ -20,9 +20,9 @@ Then, you can add the dependency to your `pom.xml` to use it in your project
 [source,xml,indent=0]
 ----
         <dependency>
-            <groupId>org.sfvl</groupId>
-            <artifactId>documentationtesting</artifactId>
-            <version>${documentationtesting.version}</version>
+            <groupId>com.github.docastest</groupId>
+            <artifactId>doc-as-test</artifactId>
+            <version>${doc-as-test.version}</version>
             <scope>test</scope>
         </dependency>
 ----
